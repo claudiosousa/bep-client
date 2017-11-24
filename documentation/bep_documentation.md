@@ -6,7 +6,7 @@ header-includes:
 - \usepackage{pdfpages}
 - \usepackage[english]{babel}
 - \usepackage{hyperref}
-- \hypersetup{  colorlinks = true,  linkcolor  = black }
+- \hypersetup{colorlinks = true,  linkcolor=black}
 - \setcounter{tocdepth}{5}
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
@@ -61,7 +61,9 @@ Dans le deuxième chapitre, *BEP Client*, on décrit le mini-projet consistant �
 
 ## Diagramme d'états
 
-Dans ce diagramme d'états on montre . La syntaxe utilisée est basée sur celle vue en cours, en particulier les notes sur les transitions ont la forme $\frac{condition}{action}$
+Dans ce diagramme d'états on montre en détails le cas nominal d'exécution: les différents états dans lesquels un noeud BEP peut se trouver, les conditions qui peuvent l'amener a transiter d'état et les actions liées à ces transitions. On décrit également les différents scenarios d'exécution qui peuvent amener le noeud a transiter vers un état d'exception.
+
+La syntaxe utilisée est basée sur celle vue en cours, en particulier les notes sur les transitions ont la forme $\frac{condition}{action}$.
 
 Le diagramme proposé ici respecte la contrainte forte que, dans chaque état, une seule condition de transition ne peut être vrai à la fois. Ceci est important pour avoir un comportement d'exécution prévisible.
 
@@ -97,10 +99,9 @@ Data.ind:
 
 Les timers décrits ici permettent de rajouter la dimension du temps dans le protocole. La valeur de leur temps n'est pas toujours précisée car dépendante de l'implémentation.
 
-\textcolor{red}{même pour le ping timer???}
 
 pingTimer:
-  : determine le temps da attendre depuis le dernier message envoyé avant d'envoi du message ping au pair (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
+  : determine le temps da attendre depuis le dernier message envoyé avant d'envcoi du message ping au pair (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
 
 downloadTimer:
   : vérifie si un *download* a toujours lieu afin de notifier la progression le cas échéant.
@@ -168,7 +169,7 @@ Après l'envoi du message *Hello*, le client reste dans cet état jusqu'à que u
  #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello): ** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Hello*). Le client passe à l'état *handleException*
 
 
-#### Block "Establish connection"
+#### Block *Establish connection*
 
 Après avoir réussit a attendre le client dans le block précédent, le client va ici essayer d'établir une connexion et échanger l'états de leurs folders.
 
@@ -362,24 +363,43 @@ On vérifie dans cet état si un message a été reçu.
 On boucle vers l'état initial du block *time to Ping?* sans autre condition
 
 
+\newpage
+
+## Diagrammes de séquence
+
+### Phase initialle
+
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54%}
+
+Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges qui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
+
+Le déroulement est asset linéaire et décrit le cas nominal de ce qui se passe lors des blocks *Initialization* et *Establish connection* du diagramme d'états. En quelques mots, une fois la connection établie entre les deux noeuds, les messages suivantes sont échangées:
+
+ * *Hello*: contenant le nom et numéro de version du client
+ * *ClusterConfig*: avec l'énumération des folders qui sont partagés avec le noeud
+ * *Index*: information sur les fichiers connus du noeud et leur version
+
+Ce diagramme finit par le block *Main loop*, où le programme restera pendant toute la durée de l'exécution.
+
+Lors de son arrêt, le programme peux envoyer le message *Close*, sans aucun contenu, pour informer le noeud pair de la fermeture de connection.
+
+## *Main loop*
+
+La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
+
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=60%}
+
+Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement.
+
+Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
+
+On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état *handleexception* dont le traitement dépend de l'implémentation.
+
+Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
+
 
 \newpage
 
-## Diagramme de séquence
-
-![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=50%}
-
-Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges q8ui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
-
-Ce diagramme finit par le clock *Main loop*. Le diagramme de séquence de la figure \ref{seq2}
-
-![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=50%}
-
-\textcolor{red}{Commenter diagramme de séquence}
-
-
-
-\newpage
 ## Diagram de classe des Messages
 
 \includepdf[landscape]{rsc/classdiagram.pdf}
@@ -387,9 +407,10 @@ Ce diagramme finit par le clock *Main loop*. Le diagramme de séquence de la fig
 # Bep client
 
 Nous avons implémenté une partie du protocole BEP dans un client nommé *Bep client* qui offre quesques fonctionalitées de base BEP.
-Ces fonctionalitées sont disponibles en tant que executable en ligne de commandes, mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
+Ces fonctionnalités sont disponibles en tant que executable en ligne de commandes, mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
 
-L'énnoncé établi quelques limitations:
+L'énoncé établi quelques limitations:
+
  * la synchronisation se fait avec un seul noeud Syncthing.
  * on suppose qu'on connaît  l'IP du noeud Syncthing, on ne fera pas de découvert dele protocole Global/Local Discovery
 
@@ -398,8 +419,7 @@ L'énnoncé établi quelques limitations:
 
 ![bep client](rsc/bepclient.png)
 
-\textcolor{red}{faire class diagram du client}
-
+La classe *BepClient* est au coeur de l'implémentation
 
 ## Usage
 
