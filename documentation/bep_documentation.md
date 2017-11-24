@@ -144,7 +144,7 @@ On spécifie dans notre diagramme d'états les conditions qui nous amènent dans
 On considère que le choix du traitement dépend de l'implémentation.
 
 
-\includepdf[landscape]{rsc/StateDiagram.pdf}
+\includepdf[landscape, width=!, height=!]{rsc/StateDiagram.pdf}
 
 
 ### Les block et leurs états
@@ -400,7 +400,7 @@ Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une
 
 ## Diagram de classe des Messages
 
-\includepdf[landscape]{rsc/classdiagram.pdf}
+\includepdf[landscape, width=!, height=!]{rsc/classdiagram.pdf}
 
 # Bep client
 
