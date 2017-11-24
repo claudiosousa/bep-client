@@ -1,15 +1,16 @@
 """
-Bep client, useful to download
+Bep client, can be used to download & upload files to a BEP node.
 
 Usage:
-  app.py [options] (showid | connect <host> [share <share_id> [download <file>]])
+  bep.py [options] (showid | connect <host> [share <share_id> [(download|upload) <file>]])
 
 Examples:
-  app.py [options] showid
-  app.py [options] connect 129.194.186.177
-  app.py [options] connect 129.194.186.177 share hyperfacile
-  app.py [options] connect 129.194.186.177 share hyperfacile download platform.py
-  app.py -h | --help
+  bep.py [options] showid
+  bep.py [options] connect 129.194.186.177
+  bep.py [options] connect 129.194.186.177 share hyperfacile
+  bep.py [options] connect 129.194.186.177 share hyperfacile download filename.py
+  bep.py [options] connect 129.194.186.177 share hyperfacile upload filename.py
+  bep.py -h | --help
 
 Options:
   -h --help          Show this screen.
@@ -20,8 +21,10 @@ Options:
 """
 
 from datetime import datetime
-from docopt import docopt
 from pprint import pprint
+
+from docopt import docopt
+
 import humanize
 from bep.BepClient import BepClient
 

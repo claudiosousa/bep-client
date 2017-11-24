@@ -1,0 +1,61 @@
+@startuml
+
+bep - BepClient
+
+humanize - bep
+pyOpenSSL -- BepClient
+protobuf -- BepClient
+BepClient - lz4
+BepClient -- bep_messages
+
+class bep {
+    main()
+}
+note top: The executable
+
+class BepClient {
+    -irequest
+    -client_id
+
+    init(cert, key)
+    connect(endpoint)
+    hello(name)
+    cluster_config(folders)
+    list_folder(folder)
+    download_file(file, folder)
+    upload_file(self, file, filecontent, folder)
+    -read(length)
+    -send_msg(msg, msg_type, response)
+    -certificate_id(certfile)
+}
+note right: The library object
+
+namespace humanize{
+
+}
+
+namespace lz4{
+
+}
+
+
+namespace protobuf{
+
+}
+namespace pyOpenSSL{
+
+}
+
+namespace bep_messages{
+    class Hello
+    class ClusterConfig
+    class Index
+    class IndexUpdate
+    class Request
+    class Response
+    class DownloadProgress
+    class Ping
+    class Close
+}
+
+@enduml

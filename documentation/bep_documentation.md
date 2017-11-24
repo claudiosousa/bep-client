@@ -23,7 +23,7 @@ geometry:
  - top=2.5cm
  - bottom=2.5cm
 nocite:
-abstract: 
+abstract:
 ...
 
 \ \
@@ -44,8 +44,8 @@ HEPIA
 
 # Introduction
 
-Ce document est le résultat de l'étude du protocole *Block Exchange Protocol*[^2] (BEP), développé et implémenté par Syncthing [^1]. 
-L'étude se décompose en deux chapitres: 
+Ce document est le résultat de l'étude du protocole *Block Exchange Protocol*[^2] (BEP), développé et implémenté par Syncthing [^1].
+L'étude se décompose en deux chapitres:
 
 Le premier chapitre, *Block Exchange Protocol*, décrit l'analyse faite sur le protocole du nom du chapitre.
 On modélise le protocole depuis trois approches différentes:
@@ -103,7 +103,7 @@ pingTimer:
   : determine le temps da attendre depuis le dernier message envoyé avant d'envoi du message ping au pair (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
 
 downloadTimer:
-  : verifie si un *download* a toujours lieu afin de notifier la progression le cas échéant.
+  : vérifie si un *download* a toujours lieu afin de notifier la progression le cas échéant.
 
 
 #### Timers d'exception
@@ -141,6 +141,7 @@ Quelques exemples:
 
 On spécifie dans notre diagramme d'états les conditions qui nous amènent dans cet état d'exception, mais on ne spécifie pas le traitement qui a lieu dans cet état.
 On considère que le choix du traitement dépend de l'implémentation.
+
 
 \includepdf[landscape]{rsc/StateDiagram.pdf}
 
@@ -362,17 +363,23 @@ On boucle vers l'état initial du block *time to Ping?* sans autre condition
 
 
 
+\newpage
 
-## Diagram de séquence
+## Diagramme de séquence
 
-\includepdf[landscape]{rsc/Seq.pdf}
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=50%}
+
+Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges q8ui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
+
+Ce diagramme finit par le clock *Main loop*. Le diagramme de séquence de la figure \ref{seq2}
+
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=50%}
+
+\textcolor{red}{Commenter diagramme de séquence}
 
 
-\textcolor{red}{diagramme de séquence}
 
-
-
-
+\newpage
 ## Diagram de classe des Messages
 
 \includepdf[landscape]{rsc/classdiagram.pdf}
@@ -382,13 +389,14 @@ On boucle vers l'état initial du block *time to Ping?* sans autre condition
 Nous avons implémenté une partie du protocole BEP dans un client nommé *Bep client* qui offre quesques fonctionalitées de base BEP.
 Ces fonctionalitées sont disponibles en tant que executable en ligne de commandes, mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
 
-L'énnoncé établi quielques limitations:
+L'énnoncé établi quelques limitations:
  * la synchronisation se fait avec un seul noeud Syncthing.
- * on suppose qu'on connait  l'IP du noeud Syncthing, on ne fera pas de découvert dele protocole Global/Local Discovery
+ * on suppose qu'on connaît  l'IP du noeud Syncthing, on ne fera pas de découvert dele protocole Global/Local Discovery
 
 
 ## Class diagramme
 
+![bep client](rsc/bepclient.png)
 
 \textcolor{red}{faire class diagram du client}
 

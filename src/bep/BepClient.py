@@ -26,7 +26,7 @@ class BepClient:
     client_id = None
 
     def __init__(self, cert, key):
-        'Initial TLSv1.2 connection with certificate and key file'
+        """Initial TLSv1.2 connection with certificate and key file"""
 
         self.client_id = certificate_id(cert)
 
@@ -36,13 +36,13 @@ class BepClient:
         self.conn = context.wrap_socket(socket.socket(socket.AF_INET))
 
     def connect(self, endpoint):
-        'Connect to endpoint'
+        """Connect to endpoint"""
 
         self.conn.connect(endpoint)
         self.conn.do_handshake()
 
     def hello(self, name):
-        "Exchange hello's"
+        """Exchange hello's"""
 
         HELLO_MAGIC_NUMBER = 0x2EA7D90B
 
@@ -63,7 +63,7 @@ class BepClient:
         return hello
 
     def cluster_config(self, folders):
-        'Send our cluster configuration'
+        """Send our cluster configuration"""
 
         f_name = folders or []
 
@@ -80,7 +80,7 @@ class BepClient:
         return self.send_msg(cluster_config, protocol.CLUSTER_CONFIG)
 
     def list_folder(self, folder='default'):
-        'List a folder files'
+        """List a folder files"""
 
         index = protocol.IndexUpdate()
         index.folder = folder
@@ -89,7 +89,7 @@ class BepClient:
         return {'folder': share.folder, 'files': files}
 
     def download_file(self, file, folder='default'):
-        'List a folder files'
+        """Download a file"""
 
         response = protocol.Response()
         file_content = b''
@@ -109,8 +109,11 @@ class BepClient:
 
         return file_content
 
+    def upload_file(self, file, filecontent, folder='default'):
+        """Upload file"""
+
     def read(self, length):
-        'Reads fixed length of bytes from connection'
+        """Reads fixed length of bytes from connection"""
 
         BUFFER_SIZE = 2 ** 12
 
