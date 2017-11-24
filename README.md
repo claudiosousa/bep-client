@@ -6,7 +6,7 @@ L'étude se décompose en deux sections:
 
 ## Documentation
 
-Le fichier [Bep documentation.pdf](documentation/bep_documentation.pdfmd)  contient l'analyse faite sur le *Block Exchange Protocol*.
+Le fichier [Bep documentation.pdf](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/documentation/bep_documentation.pdf) contient l'analyse faite sur le *Block Exchange Protocol*.
 On modélise le protocole depuis trois approches différentes:
 
  * Le diagramme d'états
