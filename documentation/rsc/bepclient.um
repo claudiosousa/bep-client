@@ -1,19 +1,19 @@
 @startuml
 
-bep - BepClient
+bepclient - BepNode
 
-humanize - bep
-pyOpenSSL -- BepClient
-protobuf -- BepClient
-BepClient - lz4
-BepClient -- bep_messages
+humanize - bepclient
+pyOpenSSL -- BepNode
+protobuf -- BepNode
+BepNode - lz4
+BepNode -- bep_messages
 
-class bep {
+class bepclient {
     main()
 }
 note top: The executable
 
-class BepClient {
+class BepNode {
     -irequest
     -client_id
 

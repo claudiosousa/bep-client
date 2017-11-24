@@ -398,8 +398,6 @@ On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu l
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
 
 
-\newpage
-
 ## Diagram de classe des Messages
 
 \includepdf[landscape]{rsc/classdiagram.pdf}
@@ -419,16 +417,87 @@ L'énoncé établi quelques limitations:
 
 ![bep client](rsc/bepclient.png)
 
-La classe *BepClient* est au coeur de l'implémentation
+La classe *BepNode* est au coeur de l'implémentation.
+Elle implémente le protocol BEP et utilise les classes me message générées depuis la définition protobuf. Cette classe utilise des packages pour la serialization, connection SSL et décompression.
 
-## Usage
+L'executable *bepclient* offre le *Command Line Interface* (CLI) sur le la fonctionnalité du *BepClient*.
 
-\textcolor{red}{coller le help du programme, exempliquer }
+## Utilisation
 
-### Examples
+L'executable *bepclient* à l'interface suivant:
+
+~~~~~~~ {.bash }
+$> python bepclient.py -h
+Bep client, can be used to download & upload files to a BEP node.
+
+Usage:
+  bepclient.py [options] (showid | connect <host> [share <share_id> [(download|upload) <file>]])
+
+Examples:
+  bepclient.py [options] showid
+  bepclient.py [options] connect 129.194.186.177
+  bepclient.py [options] connect 129.194.186.177 share hyperfacile
+  bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py
+  bepclient.py [options] connect 129.194.186.177 share hyperfacile upload filename.py
+  bepclient.py -h | --help
+
+Options:
+  -h --help          Show this screen.
+  --key=<keyfile>    Key file [default: config/key.pem].
+  --cert=<certfile>  Certificate file [default: config/cert.pem].
+  --port=<port>      Host port [default: 22000]
+  --name=<name>      The client name [default: Claudio's BEP client].
+
+~~~~~~~
 
 
-\textcolor{red}{Donner des exemples d'utilisation}
+### Exemples
+
+**Montrer l'id du certificat utilisé:**
+
+~~~~~~~ {.bash }
+$> python bepclient.py showid
+Client id: HG3DI2F-JKKVY3Z-HL5ZCWN-FH53M35-CMGFGE5-WAPGTV6-5SBWC6W-4VZSFA
+~~~~~~~
+
+**Montrer les folders d'un noeud pair:**
+
+~~~~~~~ {.bash }
+$> python ./bepclient.py connect 129.194.186.177
+Connected to: redbox
+Shared folders: 3
+        -  (facile)
+        -  (hyperfacile)
+        -  (moins_facile)
+~~~~~~~
+
+**Montrer les fichiers d'un folder:**
+
+~~~~~~~ {.bash }
+$> python ./bepclient.py connect 129.194.186.177 share hyperfacile
+Connected to: redbox
+Folder 'hyperfacile' files:
+        - platform.py                    | size:  51.4K | modified:    Nov 02   | blocks: 1
+        - platform.pyc                   | size:  36.8K | modified:    Nov 02   | blocks: 1
+        - plistlib.py                    | size:  14.8K | modified:    Nov 02   | blocks: 1
+        - plistlib.pyc                   | size:  18.7K | modified:    Nov 02   | blocks: 1
+~~~~~~~
+
+**Telécharger un fichier:**
+
+~~~~~~~ {.bash }
+$> python ./bepclient.py connect 129.194.186.177 share hyperfacile download plistlib.py
+Connected to: redbox
+File plistlib.py downloaded
+~~~~~~~
+
+**Upload un fichier:**
+
+~~~~~~~ {.bash }
+$> python ./bepclient.py connect 129.194.186.177 share hyperfacile upload test.py
+Connected to: redbox
+File test.py uploaded
+~~~~~~~
 
 # Références
 
