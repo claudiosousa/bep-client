@@ -1,0 +1,218 @@
+@startuml
+
+PreAuthentication -[hidden]> ConnectionState
+Cluster_Config -[hidden]-- Index_IndexUpdate
+ConnectionState -[hidden]-- DownloadProgress
+' DownloadProgress -[hidden]-- PostAuthentication
+PostAuthentication -[hidden]-- Request_Response
+
+namespace PreAuthentication{
+
+    class Hello {
+        string device_name
+        string client_name
+        string client_version
+    }
+
+}
+
+namespace PostAuthentication {
+
+    class Header - MessageType
+
+    MessageCompression - class Header
+
+    class Header {
+        MessageType        type
+        MessageCompression compression
+    }
+
+    enum MessageType {
+        CLUSTER_CONFIG
+        INDEX
+        INDEX_UPDATE
+        REQUEST
+        RESPONSE
+        DOWNLOAD_PROGRESS
+        PING
+        CLOSE
+    }
+
+    enum MessageCompression {
+        NONE
+        LZ4
+    }
+}
+
+namespace Cluster_Config {
+
+    ClusterConfig *- Folder
+    Folder *- Device
+    Device - Compression
+
+    class ClusterConfig {
+        Folder folders
+    }
+
+    class Folder {
+        string id
+        string label
+        bool   read_only
+        bool   ignore_permissions
+        bool   ignore_delete
+        bool   disable_temp_indexes
+        bool   paused
+
+        Device devices
+    }
+
+
+    class Device {
+        bytes       id
+        string      name
+        string      addresses
+        Compression compression
+        string      cert_name
+        int64       max_sequence
+        bool        introducer
+        uint64      index_id
+        bool        skip_introduction_removals
+    }
+
+    enum Compression {
+        METADATA
+        NEVER
+        ALWAYS
+    }
+
+}
+
+namespace Index_IndexUpdate{
+
+    Index *-- FileInfo
+    IndexUpdate *-- FileInfo
+    FileInfo -- FileInfoType
+    BlockInfo - FileInfo
+    FileInfo - Vector
+    Vector *- Counter
+
+    class Index {
+        string            folder
+        FileInfo files
+    }
+
+    class IndexUpdate {
+        string            folder
+        FileInfo files
+    }
+
+    class FileInfo {
+        string       name
+        FileInfoType type
+        int64        size
+        uint32       permissions
+        int64        modified_s
+        int32        modified_ns
+        uint64       modified_by
+        bool         deleted
+        bool         invalid
+        bool         no_permissions
+        Vector       version
+        int64        sequence
+
+        BlockInfo    Blocks
+        string       symlink_target
+    }
+
+    enum FileInfoType {
+        FILE
+        DIRECTORY
+        SYMLINK_FILE
+        SYMLINK_DIRECTORY
+        SYMLINK
+    }
+
+    class BlockInfo {
+        int64  offset
+        int32  size
+        bytes  hash
+        uint32 weak_hash
+    }
+
+    class Vector {
+        Counter counters
+    }
+
+    class Counter {
+        uint64 id
+        uint64 value
+    }
+}
+
+namespace Request_Response{
+
+    class Request {
+        int32  id
+        string folder
+        string name
+        int64  offset
+        int32  size
+        bytes  hash
+        bool   from_temporary
+    }
+
+
+    Response - ErrorCode
+
+    class Response {
+        int32     id
+        bytes     data
+        ErrorCode code
+    }
+
+    enum ErrorCode {
+        NO_ERROR
+        GENERIC
+        NO_SUCH_FILE
+        INVALID_FILE
+    }
+
+}
+
+
+namespace DownloadProgress{
+    class DownloadProgress {
+        string                     folder
+        FileDownloadProgressUpdate updates
+    }
+
+    FileDownloadProgressUpdate -- FileDownloadProgressUpdateType
+
+    class FileDownloadProgressUpdate {
+        FileDownloadProgressUpdateType update_type
+        string                         name
+        Vector                         version
+        int32                          block_indexes
+    }
+
+    enum FileDownloadProgressUpdateType {
+        APPEND
+        FORGET
+    }
+
+}
+
+namespace ConnectionState{
+
+    class Ping {
+    }
+
+
+
+    class Close {
+        string reason
+    }
+
+}
+
+@enduml
