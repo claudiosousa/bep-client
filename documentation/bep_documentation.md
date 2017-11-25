@@ -6,7 +6,7 @@ header-includes:
 - \usepackage{pdfpages}
 - \usepackage[english]{babel}
 - \usepackage{hyperref}
-- \hypersetup{colorlinks = true,  linkcolor=black}
+- \hypersetup{colorlinks=true,  linkcolor=black}
 - \setcounter{tocdepth}{5}
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
@@ -387,16 +387,13 @@ Lors de son arrêt, le programme peux envoyer le message *Close*, sans aucun con
 
 La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
 
-![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=60%}
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=56%}
 
-Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement.
-
-Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
+Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement. Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
 
 On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état *handleexception* dont le traitement dépend de l'implémentation.
 
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
-
 
 ## Diagram de classe des Messages
 
