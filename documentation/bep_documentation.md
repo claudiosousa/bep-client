@@ -103,7 +103,7 @@ Les timers décrits ici permettent de rajouter la dimension du temps dans le pro
 
 
 pingTimer:
-  : determine le temps da attendre depuis le dernier message envoyé avant d'envcoi du message ping au pair (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
+  : determine le temps d'attente maximal depuis le dernier message envoyé au pair, avant d'envoi du message ping (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
 
 downloadTimer:
   : vérifie si un *download* a toujours lieu afin de notifier la progression le cas échéant.
@@ -111,26 +111,26 @@ downloadTimer:
 
 #### Timers d'exception
 
-Lorsque ces timers expirent, un événement d'exception à lieu et on passe à l'état *handleException*.
+Lorsque ces timers expirent, un événement d'exception à lieu et la machine d'états passe à l'état *handleException*.
 
 waitingResponseTimer:
   : détermine le temps maximal d'attente de réception d'un message.
 
 peerPingTimer:
-  : de valeur supérieure pingTimer, ce timer compte le temps depuis la dernière réception du message *Ping*.
+  : de valeur supérieure pingTimer, ce timer compte le temps depuis la dernière réception d'un message de la part du noeud pair.
 
 downloadTimer:
-  : mesure la fréquence à laquelle des message DownloadProgress doivent être envoyés, si nécessaire
+  : mesure la fréquence à laquelle des message DownloadProgress doivent être envoyés, si nécessaire.
 
 ### Variables
 
-Lors de l'exécution quelques variables *globales* maintient des information de synchronisation
+Lors de l'exécution de la machine d'états, quelques variables *globales* maintiennent des information de synchronisation.
 
 newerBlocks:
- : cette variable représente tous les nouveaux blocks qui n'existent que localement et qui n'ont pas encore été annoncés au server. Souvent, ils résultent d'une modification du fichier effectuée par l'utilisateur (modification, ajout, suppression de fichier).
+  : cette variable représente tous les nouveaux blocks qui n'existent que localement et qui n'ont pas encore été annoncés au server. Souvent, ils résultent d'une modification du fichier effectuée par l'utilisateur (modification, ajout, suppression de fichier).
 
 missingBlocks:
- : cette variable représente tous les nouveaux blocks qui existent chez le pair mais pas chez nous, et dont le contenu n'a pas encore été demandé par un message *Request*.
+  : cette variable représente tous les nouveaux blocks qui existent chez le pair mais pas chez nous, et dont le contenu n'a pas encore été demandé par un message *Request*.
 
 
 ### État d'exception *handleException*
