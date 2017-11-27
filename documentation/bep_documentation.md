@@ -47,7 +47,7 @@ HEPIA
 Ce document est le résultat de l'étude du protocole *Block Exchange Protocol*[^2] (BEP), développé et implémenté par Syncthing [^1].
 L'étude se décompose en deux chapitres:
 
-Le premier chapitre, *Block Exchange Protocol*, décrit l'analyse faite sur le protocole du nom du chapitre.
+Le premier chapitre, *Block Exchange Protocol*, décrit l'analyse faite sur le protocole du même nom.
 On modélise le protocole depuis trois approches différentes:
 
  * Le diagramme d'états
@@ -61,38 +61,40 @@ Dans le deuxième chapitre, *BEP Client*, on décrit le mini-projet consistant �
 
 ## Diagramme d'états
 
-Dans ce diagramme d'états on montre en détails le cas nominal d'exécution: les différents états dans lesquels un noeud BEP peut se trouver, les conditions qui peuvent l'amener a transiter d'état et les actions liées à ces transitions. On décrit également les différents scenarios d'exécution qui peuvent amener le noeud a transiter vers un état d'exception.
+Dans ce diagramme d'états on montre en détail le cas nominal d'exécution: les différents états dans lesquels un noeud BEP peut se trouver, les conditions qui peuvent l'amener a transiter d'état et les actions liées à ces transitions. On décrit également les différents scenarios d'exécution qui peuvent amener le noeud a transiter vers un état d'exception.
 
 La syntaxe utilisée est basée sur celle vue en cours, en particulier les notes sur les transitions ont la forme $\frac{condition}{action}$.
 
-Le diagramme proposé ici respecte la contrainte forte que, dans chaque état, une seule condition de transition ne peut être vrai à la fois. Ceci est important pour avoir un comportement d'exécution prévisible.
+Le diagramme proposé ici respecte la contrainte forte que, pour chaque état, une seule condition de transition ne peut être vrai à la fois. Ceci est important pour avoir un comportement d'exécution prévisible.
 
 
-### *Actions* et *Conditions* communes
+### *Actions* et *conditions* communes
 
-On définit ici quelques *actions* et *conditions* communes utilisées à plusieurs endroit du diagramme d'état. Les actions et conditions qui apparaissent une seule fois dans le diagramme sont décrites dans leur état respectif.
+On définit ici quelques *actions* et *conditions* communes utilisées à plusieurs endroits du diagramme d'état. Les actions et conditions qui apparaissent une seule fois dans le diagramme sont décrites dans leur état respectif.
+
+### Actions
 
 Data.req:
-  : demande à la couche en dessous (couche transport) d'envoyer le message passé en paramètre. Exemple: Data.req(Hello) pour envoyer un message Hello
+  : demande à la couche en dessous (couche transport) d'envoyer le message passé en paramètre. Exemple: *Data.req(Hello)* pour envoyer un message Hello.
 
 startTimer:
-  : démarre le timer spécifié. Si le timer est en exécution, il est démarré
+  : démarre le timer spécifié. Si le timer est en exécution, il est redémarré.
 
 cancelTimer:
-  : annule l'exécution du timer passé paramètre
+  : annule l'exécution du timer passé paramètre.
 
 ### Conditions
 
 timerExpired:
-  : le timer spécifié a expiré
+  : le timer spécifié a expiré.
 
 Data.ind:
   : un message du type spécifié a été reçu et son type est celui spécifié en paramètre.
 
       Exemples:
 
-      * Data.ind(Hello) est vrai si le prochain message dans le buffer de réception est de type *Hello*.
-      * Data.ind(msg != Hello) est vrai si le prochain message dans le buffer est de type différent de *Hello*.
+      * *Data.ind(Hello)* est vrai si le prochain message dans le buffer de réception est de type *Hello*.
+      * *Data.ind(msg != Hello)* est vrai si le prochain message dans le buffer est de type différent de *Hello*.
 
 
 ### Les timers
