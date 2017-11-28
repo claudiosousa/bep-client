@@ -17,3 +17,7 @@ On y modélise le protocole depuis trois approches différentes:
 ## BEP Client
 
 Le dossier *src* contient l'implémentation python du protocole.
+
+## Auteurs
+
+Ce project est réalisé par *Claudio Sousa, ITI soir 2017*
