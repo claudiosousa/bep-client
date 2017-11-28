@@ -339,7 +339,7 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
     * **startTimer(peerPingTimer)**
 
   #. **Data.ind(DownloadProgress):** on reçoit la notification du progress d'un download
-  
+
     **Actions:**
 
     * **handleDownloadProgress:** notification utilisateur ? Dépendra de l'implémentation.
@@ -347,7 +347,7 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
 
 
   #. **Data.ind(IndexUpdate(records)):** on reçoit la notification que des nouveaux records existent chez le pair
-   
+
     **Actions:**
 
     * **updateMissingBlocks:** on met à jour la variable missingBlocks qui contient les blocks manquant chez nous.
@@ -384,7 +384,7 @@ On boucle vers l'état initial du block ([*time to Ping?*](#timetoPing)) sans au
 
 ### Phase initialle
 
-![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54px}
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54%}
 
 Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges qui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
 
@@ -400,9 +400,9 @@ Lors de son arrêt, le programme peux envoyer le message *Close*, sans aucun con
 
 ## *Main loop*
 
-La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=50%}
 
-![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=56%}
+La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
 
 Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement. Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
 
@@ -411,6 +411,8 @@ On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu l
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
 
 ## Diagram de classe des Messages\label{DiagramMessages}
+
+\newpage
 
 \includepdf[landscape, width=!, height=!]{rsc/classdiagram.pdf}
 
