@@ -238,11 +238,11 @@ Suite à l'envoi du message *Index*, le client atteind un message *Index* du noe
 
 #### Block *Main loop*
 
-Ce block contient de la boucle d'exécution principale du programme. Dans les blocks précédents la connexion fut bien établie avec le client, et chaque pair a échangé l'état de leur *Folders* et *Records*.
+Ce block contient de la boucle d'exécution principale du programme. Dans les blocks précédents, la connexion fut bien établie avec le client, et chaque noeud a échangé l'état de leur *Folders* et *Records*.
 Dans ce block on iterera sans fin afin de synchroniser tous les blocks qui n'existent pas chez tous les pairs dans leur version la plus récente. On sera a l'écoute aussi de nouveaux messages notifiant des nouvels records chez le pair, de demandes de *push* de blocks manquants chez le pair, de messages *Response* à nos messages *Request*, etc.
 
 
-##### État *time to Ping?*
+##### État *time to Ping?*\label{timetoPing}
 
 Lors de cet état on vérifie si le timer de notre *Ping* a expiré.
 
@@ -253,28 +253,28 @@ Lors de cet état on vérifie si le timer de notre *Ping* a expiré.
     **Actions:**
 
     * **Data.req(Ping)**
-    * **startTimer(pingTimer):** on veut se rappeler de quand envoyer le ping au pair.
+    * **startTimer(pingTimer):** on veut se rappeler de quand renvoyer le ping au pair.
 
   #. **!timerExpired(pingTimer):** on ne fait rien, on passe à l'état suivant
 
 
 ##### État *peer Ping missing?*
 
-Lors de cet état on vérifie si le timer du *Ping* du pair a expiré.
+Lors de cet état on vérifie si le timer du *Ping* du noeud pair a expiré.
 
 **Conditions de sortie:**
 
-  #. **!timerExpired(peerPingTimer):** on ne fait rien, on passe à l'état suivant
-  #. **timerExpired(peerPingTimer):** le pair n'a pas envoyé de *Ping* dans le temps alloué, on passe à l'etat d'exception
+  #. **!timerExpired(peerPingTimer):** on ne fait rien, on passe à l'état suivant.
+  #. **timerExpired(peerPingTimer):** le pair n'a pas envoyé de message dans le temps alloué, on passe à l'état d'exception.
 
 
 ##### État *download in progress?*
 
-Lors de cet état on vérifie des messages *Réponse* sont encore en envoi
+Lors de cet état on vérifie si des messages *Réponse* sont encore en envoi.
 
 **Conditions de sortie:**
 
-  #. **timerExpired(downloadTimer) & responseInProgress:** si un message *Response*  initié est toujours en envoi, on envoi un message *DownloadProgress* pour notifier le pair de l'avancement
+  #. **timerExpired(downloadTimer) & responseInProgress:** si un message *Response*  initié plutôt est toujours en envoi, on envoi un message *DownloadProgress* pour notifier le pair du progrès.
 
     **Actions:**
 
@@ -287,11 +287,11 @@ Lors de cet état on vérifie des messages *Réponse* sont encore en envoi
 
 ##### État *newerBlocks to notify?*
 
-On vérifie dans cet état si notre client a des nouveaux blocks dont il doit notifié de pair.
+On vérifie dans cet état si notre client a des nouveaux blocks dont il doit notifier le pair.
 
 **Conditions de sortie:**
 
-  #. **newerBlocks:** il y a des nouveaux blocks
+  #. **newerBlocks:** il y a des nouveaux blocks chez nous dont le pair ne connaît pas encore l'existence.
 
     **Actions:**
 
@@ -305,55 +305,68 @@ On vérifie dans cet état si notre client a des nouveaux blocks dont il doit no
 
 ##### État *missingBlocks to request?*
 
-On vérifie dans cet état si on connaît des nouveaux block chez le pair dont on a pas encore fait la demande.
+On vérifie dans cet état si on connaît des nouveaux blocks existant seulement chez le noeud pair dont on a pas encore fait la demande.
 
 **Conditions de sortie:**
 
-  #. **missingBlocks & freeHD:** le pair a des block qu'on a pas encore et il y a suffisamment d'espace libre chez nous (client Syncthing exige 1% d'espace libre minimal)
+  #. **missingBlocks & freeHD:** le pair a des block qu'on a pas encore et il nous avons suffisamment d'espace disque libre (client Syncthing exige 1% d'espace libre minimal)
 
     **Actions:**
 
-    * **Data.req(Request(missingBlocks)):** on demande au pair de nous envoyer les blocks manquants
-    * **missingBlocks = null:** on marque qu'il n'y a plus de missingBlocks
+    * **Data.req(Request(missingBlocks)):** on demande au noeud pair de nous envoyer les blocks manquants.
+    * **missingBlocks = null:** on marque qu'il n'y a plus de missingBlocks.
     * **startTimer(pingTimer)**
 
-  #. **!(missingBlocks & freeH):** on ne fait rien, on passe à l'état suivant
+  #. **!(missingBlocks & freeHD):** on ne fait rien, on passe à l'état suivant.
 
 
 
 ##### État *message to handle?*
 
-On vérifie dans cet état si un message a été reçu.
+On vérifie dans cet état si un message a été reçu et on le traite le cas échéant.
 
 **Conditions de sortie:**
 
-  #. **!Data.ind()** pas de message à traiter, on passe à l'état suivant
+  #. **!Data.ind()** pas de message à traiter, on passe à l'état suivant.
 
-  #. **Data.ind(Request(missingBlock)):** le pair nous fait la demande de blocks qu'il n'a pas
+  #. **Data.ind(Request(missingBlock)):** le pair nous fait la demande de blocks qu'il n'a pas.
 
     **Actions:**
 
-    * **Data.req(Response(missingBlocks)):** on envoi les blocks manquants
-    * **startTimer(downloadTimer):** on se rappelle de vérifier plus tard si des messages de *DownloadProgress* doivent être envoyées
+    * **Data.req(Response(missingBlocks)):** on envoi les blocks manquants.
+    * **startTimer(downloadTimer):** on se rappelle de vérifier plus tard si des messages de *DownloadProgress* doivent être envoyées.
     * **startTimer(pingTimer)**
+    * **startTimer(peerPingTimer)**
 
   #. **Data.ind(DownloadProgress):** on reçoit la notification du progress d'un download
+  
     **Actions:**
 
-    * **handleDownloadProgress:** notification utilisateur ? dépend de l'implémentation
+    * **handleDownloadProgress:** notification utilisateur ? Dépendra de l'implémentation.
+    * **startTimer(peerPingTimer)**
 
 
   #. **Data.ind(IndexUpdate(records)):** on reçoit la notification que des nouveaux records existent chez le pair
+   
     **Actions:**
 
-    * **updateMissingBlocks:** on met à jour la variable missingBlocks qui contient les blocks manquant chez nous
+    * **updateMissingBlocks:** on met à jour la variable missingBlocks qui contient les blocks manquant chez nous.
+    * **startTimer(peerPingTimer)**
 
 
   #. **Data.ind(Response(blocks)):** on reçoit la réponse  à une *request* précédente
+
     **Actions:**
 
-    * **saveReceivedBlocks(blocks):** on sauvegarde les nouveaux blocks reçus
+    * **saveReceivedBlocks(blocks):** on sauvegarde les nouveaux blocks reçus.
+    * **startTimer(peerPingTimer)**
 
+
+  #. **Data.ind(Pint):** on reçoit le *Ping*
+
+    **Actions:**
+
+    * **startTimer(peerPingTimer)**
 
   #. **Data.ind(Hello) | Data.ind(ClusterConfig) | Data.ind(Index):** on reçoit un message auquel on ne s'attend pas, on passe à l'état d'exception
 
@@ -364,16 +377,14 @@ On vérifie dans cet état si un message a été reçu.
 
 État symbolique, atteint après la gestion d'un message reçu (ou son absence).
 
-On boucle vers l'état initial du block *time to Ping?* sans autre condition
+On boucle vers l'état initial du block ([*time to Ping?*](#timetoPing)) sans autre condition.
 
-
-\newpage
 
 ## Diagrammes de séquence
 
 ### Phase initialle
 
-![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54%}
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54px}
 
 Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges qui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
 
