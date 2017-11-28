@@ -384,7 +384,7 @@ On boucle vers l'état initial du block ([*time to Ping?*](#timetoPing)) sans au
 
 ### Phase initialle
 
-![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=54%}
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png)
 
 Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges qui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
 
@@ -400,39 +400,41 @@ Lors de son arrêt, le programme peux envoyer le message *Close*, sans aucun con
 
 ## *Main loop*
 
-![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=50%}
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png)
 
 La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
 
 Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement. Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
 
-On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état *handleexception* dont le traitement dépend de l'implémentation.
+On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état [*handleException*](#handleException) dont le traitement dépend de l'implémentation.
 
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
 
-## Diagram de classe des Messages\label{DiagramMessages}
+## Diagramme de classe des Messages\label{DiagramMessages}
 
-\newpage
+La page du protocol BEP[^1] décrit textuellement le rôle de chaque message et leurs attributs. A cette description nous n'avons pas de mots à rajouter, mais proposons dans ce chapitre une réprésentation graphique en complément.
+
+Le diagramme de classes des différentes méssages échangées est dessiné ci-dessous. Dans ce schéma nous montrons une vue de l'ensemble des messages, les classes et enumérations utilisées, leurs dépendences et leur *packaging* fonctionel.
 
 \includepdf[landscape, width=!, height=!]{rsc/classdiagram.pdf}
 
 # Bep client
 
-Nous avons implémenté une partie du protocole BEP dans un client nommé *Bep client* qui offre quesques fonctionalitées de base BEP.
-Ces fonctionnalités sont disponibles en tant que executable en ligne de commandes, mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
+Nous avons implémenté une partie du protocole BEP dans un client nommé *Bep client* qui offre quelques fonctionalitées de base BEP.
+Ces fonctionnalités sont disponibles en tant qu'executable en ligne de commande (CLI), mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
 
 L'énoncé établi quelques limitations:
 
  * la synchronisation se fait avec un seul noeud Syncthing.
- * on suppose qu'on connaît  l'IP du noeud Syncthing, on ne fera pas de découvert dele protocole Global/Local Discovery
+ * on suppose qu'on connaît  l'IP du noeud Syncthing, et on n'utilisera pas de protocole Global/Local Discovery.
 
 
 ## Class diagramme
 
-![bep client](rsc/bepclient.png)
+![bep client\label{bepclient_class}](rsc/bepclient.png)
 
 La classe *BepNode* est au coeur de l'implémentation.
-Elle implémente le protocol BEP et utilise les classes me message générées depuis la définition protobuf. Cette classe utilise des packages pour la serialization, connection SSL et décompression.
+Elle implémente le protocol BEP et utilise les classes de message générées depuis la définition protobuf. Cette classe utilise des packages tiers pour la serialization, connection SSL et décompression. Ceci est visible dans la figure \ref{bepclient_class}.
 
 L'executable *bepclient* offre le *Command Line Interface* (CLI) sur le la fonctionnalité du *BepClient*.
 
