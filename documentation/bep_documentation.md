@@ -6,7 +6,7 @@ header-includes:
 - \usepackage{pdfpages}
 - \usepackage[english]{babel}
 - \usepackage{hyperref}
-- \hypersetup{colorlinks=true,  linkcolor=black}
+- \hypersetup{colorlinks=true,  linkcolor=blue}
 - \setcounter{tocdepth}{5}
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
@@ -111,7 +111,7 @@ downloadTimer:
 
 #### Timers d'exception
 
-Lorsque ces timers expirent, un événement d'exception à lieu et la machine d'états passe à l'état *handleException*.
+Lorsque ces timers expirent, un événement d'exception à lieu et la machine d'états passe à l'état [*handleException*](#handleException).
 
 waitingResponseTimer:
   : détermine le temps maximal d'attente de réception d'un message.
@@ -124,16 +124,16 @@ downloadTimer:
 
 ### Variables
 
-Lors de l'exécution de la machine d'états, quelques variables *globales* maintiennent des information de synchronisation.
+Lors de l'exécution de la machine d'états, quelques variables globales maintiennent des information de synchronisation.
 
 newerBlocks:
   : cette variable représente tous les nouveaux blocks qui n'existent que localement et qui n'ont pas encore été annoncés au server. Souvent, ils résultent d'une modification du fichier effectuée par l'utilisateur (modification, ajout, suppression de fichier).
 
 missingBlocks:
-  : cette variable représente tous les nouveaux blocks qui existent chez le pair mais pas chez nous, et dont le contenu n'a pas encore été demandé par un message *Request*.
+  : cette variable représente tous les nouveaux blocks qui existent chez le noeud pair mais pas chez nous, et dont le contenu n'a pas encore été demandé par un message *Request*.
 
 
-### État d'exception *handleException*
+### État d'exception *handleException*\label{handleException}
 
 L'exécution de la machine d'état tombe dans cet état particulier lorsqu'un événement non attendu à lieu.
 
@@ -145,6 +145,7 @@ Quelques exemples:
 On spécifie dans notre diagramme d'états les conditions qui nous amènent dans cet état d'exception, mais on ne spécifie pas le traitement qui a lieu dans cet état.
 On considère que le choix du traitement dépend de l'implémentation.
 
+### Schema
 
 \includepdf[landscape, width=!, height=!]{rsc/StateDiagram.pdf}
 
@@ -153,52 +154,53 @@ On considère que le choix du traitement dépend de l'implémentation.
 
 #### Block *Initialization*
 
-Dans ce block, le client est initialisé et essaye de joindre le pair.
+Dans ce block, le client est initialisé et essaye de joindre le noeud pair.
 
 **Actions initiales, exécutées sans condition**
 
-* **useOrCreateNewClientId:** bien que pas partie du protocole, cette étape est cruciale car elle initialise, si besoin, la clé publique et le certificat à être utilisés par le client. L'identifiant du client est une information dérivée directement du certificat public.
-* **Data.req(Hello):** On envoi le message *Hello* \textcolor{red}{rajouter ref chapitre class diagramme messages} au pair
+* **useOrCreateNewClientId:** bien que pas partie strictement du protocole, cette étape est cruciale car elle initialise, si besoin, la clé publique et le certificat à être utilisés par le client. L'identifiant du client est une information dérivée directement du certificat public.
+* **Data.req(Hello):** On envoi le message *Hello* au noeud pair(pour pus de details sur les messages, voir chapitre [Diagram de classe des Messages](#DiagramMessages)).
 * **startTimer(waitingResponseTimer)**
 
 ##### État *Waiting Hello*
+
 
 Après l'envoi du message *Hello*, le client reste dans cet état jusqu'à que une de deux conditions soit remplie.
 
 **Conditions de sortie:**
 
- #. **Data.ind(Hello): ** on reçoit le *Hello* du pair, on passe à l'état *Verify clientId* du prochain block
- #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello): ** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Hello*). Le client passe à l'état *handleException*
+ #. **Data.ind(Hello): ** on reçoit le *Hello* du noeud pair, on passe à l'état [*Verify deviceId*](#VerifyclientId) du prochain block
+ #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello): ** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (différent de *Hello*). Le client passe à l'état [*handleException*](#handleException)
 
 
 #### Block *Establish connection*
 
-Après avoir réussit a attendre le client dans le block précédent, le client va ici essayer d'établir une connexion et échanger l'états de leurs folders.
+Après avoir réussit à attendre le noeud pair dans le block précédent, le client va ici essayer d'établir une connexion et échanger l'états de leurs folders.
 
 
-##### État *Verify clientId*
+##### État *Verify deviceId*\label{VerifyclientId}
 
 
-Après avoir échangé les messages *Hello", le client va vérifier que le pair est un client connu en calculant le clientId du pair (depuis son certificat utilisé pour établir la connexion SSL) et en vérifiant que le clientId obtenu est dans la liste des pairs auxquels le client fait confiance.
+Après avoir échangé les messages *Hello*, le client va vérifier que le pair est un client connu en calculant le deviceId du pair (depuis son certificat utilisé pour établir la connexion SSL) et en vérifiant que le deviceId obtenu est dans la liste des pairs auxquels le client fait confiance.
 
 Les détails concernant le maintient de la liste des clientIds connus ne fait pas partie du protocole et dépendra de l'implémentation.
 
 **Conditions de sortie:**
 
- #. **knownClient:** le clientId du pair est reconnu comme valide.
+ #. **knownDevice:** le deviceId du pair est reconnu comme valide.
 
     **Actions:**
 
-    * **Data.req(ClusterConfig(Folders)):** le client envoi le message *ClusterConfig* contenant les informations des *Folders* partagés
+    * **Data.req(ClusterConfig(Folders)):** on envoi le message *ClusterConfig* contenant les informations des *Folders* partagés
     * **startTimer(waitingResponseTimer)**
 
- #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello):** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Hello*)
+ #. **!knownDevice:** condition d'exception, vérifiée si le deviceId calculé est inconnu.
 
 
 
 ##### État *Waiting ClusterConfig*
 
-Suite à l'envoi du message *Hello", le client doit atteindre la réception du message du même type de la part du pair.
+Suite à l'envoi du message *ClusterConfig*, le client doit atteindre la réception du message du même type de la part du noeud pair.
 
 **Conditions de sortie:**
 
@@ -206,7 +208,7 @@ Suite à l'envoi du message *Hello", le client doit atteindre la réception du m
 
     **Actions:**
 
-    * **Data.req(Index(Records)):** le client envoi le message *Index* contenant les informations des *Records* \textcolor{red}{ *Records* vs *blocks* ??}
+    * **Data.req(Index(Records)):** le client envoi le message *Index* contenant les informations des *Blocks* connus
     * **startTimer(waitingResponseTimer)**
 
  #. **timerExpired(waitingResponseTimer) | Data.ind(msg != ClusterConfig): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*ClusterConfig*)
@@ -215,17 +217,17 @@ Suite à l'envoi du message *Hello", le client doit atteindre la réception du m
 
 ##### État *Waiting Index*
 
-Suite à l'envoi du message *Index", le client atteindre message *Index* du pair
+Suite à l'envoi du message *Index*, le client atteind un message *Index* du noeud pair.
 
 **Conditions de sortie:**
 
-  #. **Data.ind(Index(Records)):** on reçoit le message attendu avec les informations des *Records* partagés
+  #. **Data.ind(Index(Records)):** on reçoit le message attendu avec les informations des blocks partagés
 
     **Actions:**
 
     * **cancelTimer(waitingResponseTimer):** on n'attend plus une réponse immédiate.
     * **startTimer(pingTimer):** on veut se rappeler quand envoyer le ping au pair.
-    * **startTimer(peerPingTimer):** on veut savoir quand l'attente du ping de la par du pair à expiré.
+    * **startTimer(peerPingTimer):** on veut savoir quand l'attente d'un message de la part du noeud pair à expiré.
     * **updateMissingBlocks(records)):** on compare les *records* envoyés avec ceux reçus, afin de mettre à jour la variable *missingBlocks*. Ceux blocks seront demandés au pair ultérieurement.
 
  #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Index): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Index*)
@@ -397,7 +399,7 @@ On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu l
 
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
 
-## Diagram de classe des Messages
+## Diagram de classe des Messages\label{DiagramMessages}
 
 \includepdf[landscape, width=!, height=!]{rsc/classdiagram.pdf}
 
