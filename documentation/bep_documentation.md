@@ -411,6 +411,8 @@ On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu l
 
 Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client.
 
+\newpage
+
 ## Diagramme de classe des Messages\label{DiagramMessages}
 
 La page du protocol BEP[^1] décrit textuellement le rôle de chaque message et leurs attributs. A cette description nous n'avons pas de mots à rajouter, mais proposons dans ce chapitre une réprésentation graphique en complément.
