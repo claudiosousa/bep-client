@@ -67,6 +67,7 @@ La syntaxe utilisée est basée sur celle vue en cours, en particulier les notes
 
 Le diagramme proposé ici respecte la contrainte forte que, pour chaque état, une seule condition de transition ne peut être vrai à la fois. Ceci est important pour avoir un comportement d'exécution prévisible.
 
+Conceptuellement, la machine d'états est essentiellement réactive, réagissant à des événements déclenchés par la couche du dessus (l'application) ou à la réception d'un messages d'un noeud BEP pair. Dans notre diagramme, nous proposons une représentation séquentielle afin de tenir en compte la dimension du temps. Pour ce faire, nous utilisons des variables globales qui conditionnent le comportement de la machine à état des actions. Aussi, certaines actions que nous appelons lors des transitions n'ont pas de comportement spécifié dans ce document car leur comportement est implémenté par la couche du dessus. En general elles mettent à jour des variables globales qui vont conditionner le comportement de la machine à états.
 
 ### *Actions* et *conditions* communes
 
@@ -217,7 +218,7 @@ Suite à l'envoi du message *ClusterConfig*, le client doit atteindre la récept
 
 ##### État *Waiting Index*
 
-Suite à l'envoi du message *Index*, le client atteind un message *Index* du noeud pair.
+Suite à l'envoi du message *Index*, le client atteint un message *Index* du noeud pair.
 
 **Conditions de sortie:**
 
@@ -439,7 +440,8 @@ Elle implémente le protocol BEP et utilise les classes de message générées d
 L'executable *bepclient* offre le *Command Line Interface* (CLI) sur le la fonctionnalité du *BepClient*.
 
 
-\newpage 
+\newpage
+
 ## Utilisation
 
 L'executable *bepclient* à l'interface suivant:
