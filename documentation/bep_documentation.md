@@ -54,7 +54,7 @@ On modélise le protocole depuis trois approches différentes:
  * Le diagramme de séquences
  * Le diagramme de classes des messages échangées
 
-Dans le deuxième chapitre, *BEP Client*, on décrit le mini-projet consistant à implémenter une partie le protocole décrit au premier chapitre.
+Dans le deuxième chapitre, *BEP Client*, on décrit le mini-projet consistant à implémenter une partie du protocole décrit au premier chapitre.
 
 
 # Block Exchange Protocol
@@ -103,7 +103,7 @@ Les timers décrits ici permettent de rajouter la dimension du temps dans le pro
 
 
 pingTimer:
-  : determine le temps d'attente maximal depuis le dernier message envoyé au pair, avant d'envoi du message ping (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
+  : determine le temps d'attente maximal depuis le dernier message envoyé au pair, avant l'envoi du message ping (*heartbeat*). Le protocole[^2] spécifie que la valeur de ce timer est de 90s.
 
 downloadTimer:
   : vérifie si un *download* a toujours lieu afin de notifier la progression le cas échéant.
@@ -111,7 +111,7 @@ downloadTimer:
 
 #### Timers d'exception
 
-Lorsque ces timers expirent, un événement d'exception à lieu et la machine d'états passe à l'état [*handleException*](#handleException).
+Lorsque ces timers expirent, un événement d'exception a lieu et la machine d'états passe à l'état [*handleException*](#handleException).
 
 waitingResponseTimer:
   : détermine le temps maximal d'attente de réception d'un message.
@@ -120,7 +120,7 @@ peerPingTimer:
   : de valeur supérieure pingTimer, ce timer compte le temps depuis la dernière réception d'un message de la part du noeud pair.
 
 downloadTimer:
-  : mesure la fréquence à laquelle des message DownloadProgress doivent être envoyés, si nécessaire.
+  : mesure la fréquence à laquelle des messages DownloadProgress doivent être envoyés, si nécessaire.
 
 ### Variables
 
@@ -158,19 +158,19 @@ Dans ce block, le client est initialisé et essaye de joindre le noeud pair.
 
 **Actions initiales, exécutées sans condition**
 
-* **useOrCreateNewClientId:** bien que pas partie strictement du protocole, cette étape est cruciale car elle initialise, si besoin, la clé publique et le certificat à être utilisés par le client. L'identifiant du client est une information dérivée directement du certificat public.
-* **Data.req(Hello):** On envoi le message *Hello* au noeud pair(pour pus de details sur les messages, voir chapitre [Diagram de classe des Messages](#DiagramMessages)).
+* **useOrCreateNewClientId:** bien que ne faisant pas pas partie strictement du protocole, cette étape est cruciale car elle initialise, si besoin, la clé publique et le certificat à être utilisés par le client. L'identifiant du client est une information dérivée directement du certificat public.
+* **Data.req(Hello):** On envoi le message *Hello* au noeud pair(pour plus de détails sur les messages, voir chapitre [Diagramme de classe des Messages](#DiagramMessages)).
 * **startTimer(waitingResponseTimer)**
 
 ##### État *Waiting Hello*
 
 
-Après l'envoi du message *Hello*, le client reste dans cet état jusqu'à que une de deux conditions soit remplie.
+Après l'envoi du message *Hello*, le client reste dans cet état jusqu'à qu'une de deux conditions soit remplie.
 
 **Conditions de sortie:**
 
- #. **Data.ind(Hello): ** on reçoit le *Hello* du noeud pair, on passe à l'état [*Verify deviceId*](#VerifyclientId) du prochain block
- #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello): ** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (différent de *Hello*). Le client passe à l'état [*handleException*](#handleException)
+ #. **Data.ind(Hello): ** on reçoit le *Hello* du noeud pair, on passe à l'état [*Verify deviceId*](#VerifyclientId) du prochain block.
+ #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Hello): ** condition d'exception, a lieu si on ne reçoit pas de message dans le temps alloué .(*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (différent de *Hello*). Le client passe à l'état [*handleException*](#handleException).
 
 
 #### Block *Establish connection*
@@ -191,7 +191,7 @@ Les détails concernant le maintient de la liste des clientIds connus ne fait pa
 
     **Actions:**
 
-    * **Data.req(ClusterConfig(Folders)):** on envoi le message *ClusterConfig* contenant les informations des *Folders* partagés
+    * **Data.req(ClusterConfig(Folders)):** on envoi le message *ClusterConfig* contenant les informations des *Folders* partagés.
     * **startTimer(waitingResponseTimer)**
 
  #. **!knownDevice:** condition d'exception, vérifiée si le deviceId calculé est inconnu.
@@ -204,14 +204,14 @@ Suite à l'envoi du message *ClusterConfig*, le client doit atteindre la récept
 
 **Conditions de sortie:**
 
-  #. **Data.ind(ClusterConfig(Folders)):** on reçoit le message attendu avec les informations des *Folders* partagés
+  #. **Data.ind(ClusterConfig(Folders)):** on reçoit le message attendu avec les informations des *Folders* partagés.
 
     **Actions:**
 
-    * **Data.req(Index(Records)):** le client envoi le message *Index* contenant les informations des *Blocks* connus
+    * **Data.req(Index(Records)):** le client envoi le message *Index* contenant les informations des *Blocks* connus.
     * **startTimer(waitingResponseTimer)**
 
- #. **timerExpired(waitingResponseTimer) | Data.ind(msg != ClusterConfig): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*ClusterConfig*)
+ #. **timerExpired(waitingResponseTimer) | Data.ind(msg != ClusterConfig): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*ClusterConfig*).
 
 
 
@@ -221,16 +221,16 @@ Suite à l'envoi du message *Index*, le client atteind un message *Index* du noe
 
 **Conditions de sortie:**
 
-  #. **Data.ind(Index(Records)):** on reçoit le message attendu avec les informations des blocks partagés
+  #. **Data.ind(Index(Records)):** on reçoit le message attendu avec les informations des blocks partagés.
 
     **Actions:**
 
     * **cancelTimer(waitingResponseTimer):** on n'attend plus une réponse immédiate.
     * **startTimer(pingTimer):** on veut se rappeler quand envoyer le ping au pair.
     * **startTimer(peerPingTimer):** on veut savoir quand l'attente d'un message de la part du noeud pair à expiré.
-    * **updateMissingBlocks(records)):** on compare les *records* envoyés avec ceux reçus, afin de mettre à jour la variable *missingBlocks*. Ceux blocks seront demandés au pair ultérieurement.
+    * **updateMissingBlocks(records)):** on compare les *records* envoyés avec ceux reçus, afin de mettre à jour la variable *missingBlocks*. Ces blocks seront demandés au pair ultérieurement.
 
- #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Index): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Index*)
+ #. **timerExpired(waitingResponseTimer) | Data.ind(msg != Index): ** condition d'exception, à lieu si on ne reçoit pas de message dans le temps alloué (*waitingResponseTimer*) ou qu'on reçoit un message de type non attendu (*Index*).
 
 
 
@@ -238,8 +238,8 @@ Suite à l'envoi du message *Index*, le client atteind un message *Index* du noe
 
 #### Block *Main loop*
 
-Ce block contient de la boucle d'exécution principale du programme. Dans les blocks précédents, la connexion fut bien établie avec le client, et chaque noeud a échangé l'état de leur *Folders* et *Records*.
-Dans ce block on iterera sans fin afin de synchroniser tous les blocks qui n'existent pas chez tous les pairs dans leur version la plus récente. On sera a l'écoute aussi de nouveaux messages notifiant des nouvels records chez le pair, de demandes de *push* de blocks manquants chez le pair, de messages *Response* à nos messages *Request*, etc.
+Ce block contient la boucle d'exécution principale du programme. Dans les blocks précédents, la connexion fut bien établie avec le client, et chaque noeud a échangé l'état de leur *Folders* et *Records*.
+Dans ce block on itérera sans fin jusqu'à synchroniser de synchroniser tous les blocks qui n'existent pas chez tous les pairs dans leur version la plus récente. On sera a l'écoute aussi de nouveaux messages notifiant des nouvels records chez le pair, de demandes de *push* de blocks manquants chez le pair, de messages *Response* à nos messages *Request*, etc.
 
 
 ##### État *time to Ping?*\label{timetoPing}
@@ -248,14 +248,14 @@ Lors de cet état on vérifie si le timer de notre *Ping* a expiré.
 
 **Conditions de sortie:**
 
-  #. **timerExpired(pingTimer):** il est temps d'envoyer un message *Ping*
+  #. **timerExpired(pingTimer):** il est temps d'envoyer un message *Ping*.
 
     **Actions:**
 
     * **Data.req(Ping)**
     * **startTimer(pingTimer):** on veut se rappeler de quand renvoyer le ping au pair.
 
-  #. **!timerExpired(pingTimer):** on ne fait rien, on passe à l'état suivant
+  #. **!timerExpired(pingTimer):** on ne fait rien, on passe à l'état suivant.
 
 
 ##### État *peer Ping missing?*
@@ -274,15 +274,15 @@ Lors de cet état on vérifie si des messages *Réponse* sont encore en envoi.
 
 **Conditions de sortie:**
 
-  #. **timerExpired(downloadTimer) & responseInProgress:** si un message *Response*  initié plutôt est toujours en envoi, on envoi un message *DownloadProgress* pour notifier le pair du progrès.
+  #. **timerExpired(downloadTimer) & responseInProgress:** si un message *Response*  initié plutôt est toujours en envoi, on envoit un message *DownloadProgress* pour notifier le pair du progrès.
 
     **Actions:**
 
-    * **Data.req(DownloadProgress): ** envoi l'état de progrès du download
+    * **Data.req(DownloadProgress): ** envoi l'état de progrès du download.
     * **startTimer(downloadTimer) **
     * **startTimer(pingTimer)**
 
-  #. **!(timerExpired(downloadTimer) & responseInProgress):** on ne fait rien, on passe à l'état suivant
+  #. **!(timerExpired(downloadTimer) & responseInProgress):** on ne fait rien, on passe à l'état suivant.
 
 
 ##### État *newerBlocks to notify?*
@@ -296,20 +296,20 @@ On vérifie dans cet état si notre client a des nouveaux blocks dont il doit no
     **Actions:**
 
     * **Data.req(IndexUpdate(newerBlocks)):** on notifie le pair que des nouveaux blocks existent chez nous.
-    * **newerBlocks = null:** on marque qu'il n'y a plus de newerBlocks
+    * **newerBlocks = null:** on marque qu'il n'y a plus de newerBlocks.
     * **startTimer(pingTimer)**
 
-  #. **!newerBlocks:** on ne fait rien, on passe à l'état suivant
+  #. **!newerBlocks:** on ne fait rien, on passe à l'état suivant.
 
 
 
 ##### État *missingBlocks to request?*
 
-On vérifie dans cet état si on connaît des nouveaux blocks existant seulement chez le noeud pair dont on a pas encore fait la demande.
+On vérifie dans cet état si on connaît de nouveaux blocks existant seulement chez le noeud pair dont on a pas encore fait la demande.
 
 **Conditions de sortie:**
 
-  #. **missingBlocks & freeHD:** le pair a des block qu'on a pas encore et il nous avons suffisamment d'espace disque libre (client Syncthing exige 1% d'espace libre minimal)
+  #. **missingBlocks & freeHD:** le pair a des blocks qu'on a pas encore et il y a suffisamment d'espace de disque libre (client Syncthing exige 1% d'espace libre minimal).
 
     **Actions:**
 
@@ -338,7 +338,7 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
     * **startTimer(pingTimer)**
     * **startTimer(peerPingTimer)**
 
-  #. **Data.ind(DownloadProgress):** on reçoit la notification du progress d'un download
+  #. **Data.ind(DownloadProgress):** on reçoit la notification du progress d'un download.
 
     **Actions:**
 
@@ -346,7 +346,7 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
     * **startTimer(peerPingTimer)**
 
 
-  #. **Data.ind(IndexUpdate(records)):** on reçoit la notification que des nouveaux records existent chez le pair
+  #. **Data.ind(IndexUpdate(records)):** on reçoit la notification que des nouveaux records existent chez le pair.
 
     **Actions:**
 
@@ -354,7 +354,7 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
     * **startTimer(peerPingTimer)**
 
 
-  #. **Data.ind(Response(blocks)):** on reçoit la réponse  à une *request* précédente
+  #. **Data.ind(Response(blocks)):** on reçoit la réponse  à une *request* précédente.
 
     **Actions:**
 
@@ -362,13 +362,13 @@ On vérifie dans cet état si un message a été reçu et on le traite le cas é
     * **startTimer(peerPingTimer)**
 
 
-  #. **Data.ind(Pint):** on reçoit le *Ping*
+  #. **Data.ind(Pint):** on reçoit le *Ping*.
 
     **Actions:**
 
     * **startTimer(peerPingTimer)**
 
-  #. **Data.ind(Hello) | Data.ind(ClusterConfig) | Data.ind(Index):** on reçoit un message auquel on ne s'attend pas, on passe à l'état d'exception
+  #. **Data.ind(Hello) | Data.ind(ClusterConfig) | Data.ind(Index):** on reçoit un message auquel on ne s'attend pas, on passe à l'état d'exception.
 
 
 
@@ -384,11 +384,11 @@ On boucle vers l'état initial du block ([*time to Ping?*](#timetoPing)) sans au
 
 ### Phase initialle
 
-![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png)
+![Diagramme de séquence - connect to peer\label{seq1}](rsc/Seq1.png){width=80%}
 
 Le diagramme de séquence de la figure \ref{seq1} montre les différentes échanges qui ont lieu lors de la phase initial de connection entre deux noeuds BEP (nommés ici *client*, et *Peer*).
 
-Le déroulement est asset linéaire et décrit le cas nominal de ce qui se passe lors des blocks *Initialization* et *Establish connection* du diagramme d'états. En quelques mots, une fois la connection établie entre les deux noeuds, les messages suivantes sont échangées:
+Le déroulement est assez linéaire et décrit le cas nominal de ce qui se passe lors des blocks *Initialization* et *Establish connection* du diagramme d'états. En quelques mots, une fois la connection établie entre les deux noeuds, les messages suivantes sont échangées:
 
  * *Hello*: contenant le nom et numéro de version du client
  * *ClusterConfig*: avec l'énumération des folders qui sont partagés avec le noeud
@@ -396,19 +396,19 @@ Le déroulement est asset linéaire et décrit le cas nominal de ce qui se passe
 
 Ce diagramme finit par le block *Main loop*, où le programme restera pendant toute la durée de l'exécution.
 
-Lors de son arrêt, le programme peux envoyer le message *Close*, sans aucun contenu, pour informer le noeud pair de la fermeture de connection.
+Lors de son arrêt, le programme peut envoyer le message *Close*, sans aucun contenu, pour informer le noeud pair de la fermeture de la connection.
 
 ## *Main loop*
 
-![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png)
+![Diagramme de séquence - main loop\label{seq2}](rsc/Seq2.png){width=80%}
 
 La figure \ref{seq2} montre le diagramme de séquence décrivant ce qui se passe dans block *Main loop*.
 
-Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement. Examples d'événements sont: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
+Ici nous avons choisit de montrer les différentes actions qui ont lieu sous forme de réaction à un événement. Exemples d'événements: un timer expire, un message est reçu du noeud pair, un événement du système de fichiers a lieu.
 
-On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état [*handleException*](#handleException) dont le traitement dépend de l'implémentation.
+On exemplifie un cas exception: la gestion du timer *peerPingTimer* qui a lieu lorqu'on n'a pas reçu de message de la part du pair depuis trop longtemps. Cet événement nous amène sur l'état [*handleException*](#handleException) dont le traitement dépend de l'implémentation.
 
-Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client
+Par soucis de simplicité graphique, chaque traitement n'est représenté qu'une seule fois dans sa symétrie, soit dans sa version serveur, soit dans sa version client.
 
 ## Diagramme de classe des Messages\label{DiagramMessages}
 
@@ -438,6 +438,8 @@ Elle implémente le protocol BEP et utilise les classes de message générées d
 
 L'executable *bepclient* offre le *Command Line Interface* (CLI) sur le la fonctionnalité du *BepClient*.
 
+
+\newpage 
 ## Utilisation
 
 L'executable *bepclient* à l'interface suivant:
