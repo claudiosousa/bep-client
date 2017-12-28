@@ -4,13 +4,13 @@
 Bep client, can be used to download & upload files to a BEP node.
 
 Usage:
-  bepclient.py [options] (showid | connect <host> [share <share_id> [(download|upload) <file>]])
+  bepclient.py [options] (showid | connect <host> [share <share_id> [(download <remotefile> <localfile> | upload <localfile>)]])
 
 Examples:
   bepclient.py [options] showid
   bepclient.py [options] connect 129.194.186.177
   bepclient.py [options] connect 129.194.186.177 share hyperfacile
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py
+  bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py /tmp/plistlib.py
   bepclient.py [options] connect 129.194.186.177 share hyperfacile upload filename.py
   bepclient.py -h | --help
 
@@ -73,15 +73,16 @@ def main():
         return
 
     # download file
-    file = args['<file>']
+    remotefile = args['<remotefile>']
     files = {f.name: f for f in share['files']}
-    assert file in files, f'could not find file {file}'
-    res = client.download_file(file=files[file], folder=share['folder'])
-    filename = file.split('/')[-1]
-    with open(filename, "wb") as f:
+    assert remotefile in files, f'could not find file {remotefile}'
+    res = client.download_file(file=files[remotefile], folder=share['folder'])
+
+    localfile = args['<localfile>']
+    with open(localfile, "wb") as f:
         f.write(res)
 
-    print(f'File {filename} downloaded')
+    print(f'File {localfile} downloaded')
 
 
 if __name__ == '__main__':
