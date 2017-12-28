@@ -111,6 +111,7 @@ class BepNode:
 
     def upload_file(self, file, filecontent, folder='default'):
         """Upload file"""
+        pass
 
     def read(self, length):
         """Reads fixed length of bytes from connection"""

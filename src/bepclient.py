@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.6
+
 """
 Bep client, can be used to download & upload files to a BEP node.
 
@@ -33,8 +35,8 @@ args = docopt(__doc__)
 
 
 def main():
-    keyfile = args.get('--key', 'config/key.pem')
-    certfile = args.get('--cert', 'config/cert.pem')
+    keyfile = args.get('--key')
+    certfile = args.get('--cert')
     client = BepNode(cert=certfile, key=keyfile)
 
     if args['showid']:  # just want to show clientid
@@ -42,10 +44,10 @@ def main():
         return
 
     host = args.get('<host>')
-    port = int(args.get('<port>', 22000))
+    port = int(args.get('--port'))
     client.connect((host, port))
 
-    name = args.get('<name>', "Claudio's BEP client")
+    name = args.get('--name')
     peerinfo = client.hello(name)
     print(f'Connected to: {peerinfo.device_name}')
 
