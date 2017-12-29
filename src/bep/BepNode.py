@@ -91,7 +91,9 @@ class BepNode:
             folder.disable_temp_indexes = True
 
         self._send_msg(cluster_config, protocol.CLUSTER_CONFIG)
-        return self._read_msg()
+        res = self._read_msg()
+        assert res.DESCRIPTOR.name == 'ClusterConfig', 'Expected msg of type ClusterConfig'
+        return res
 
     def list_folder(self, folder='default'):
         """List a folder files"""
@@ -105,6 +107,7 @@ class BepNode:
         # useful if share data is too big to fit in 1 message
         while select.select([self.__conn], [], [], 1)[0]:
             share = self._read_msg()
+            assert share.DESCRIPTOR.name in ('Index', 'IndexUpdate'), 'Expected msg of type Index(Update)'
             files += filter(lambda f: not f.deleted, share.files)
 
         return {'folder': share.folder, 'files': files}
@@ -125,6 +128,7 @@ class BepNode:
             self.irequest += 1
             self._send_msg(request, protocol.REQUEST)
             res = self._read_msg()
+            assert res.DESCRIPTOR.name == 'Response', 'Expected msg of type Response'
             assert res.code == protocol.NO_ERROR, f'Failed to retrieve file: {res.code}'
             file_content += res.data
 
