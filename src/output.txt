@@ -1,0 +1,1198 @@
+Connected to: redbox
+Folder 'moins_facile' content:
+File                                       |    Size  |   Modified   | Blocks
+audit                                      |       0B |    Oct 20    | 0
+audit/sotruss-lib.so                       |    10.3K |    Oct 20    | 1
+avahi                                      |       0B |    Oct 20    | 0
+avahi/service-types.db                     |    15.2K |    Oct 20    | 1
+coreutils                                  |       0B |    Oct 20    | 0
+coreutils/libstdbuf.so                     |     6.1K |    Oct 20    | 1
+engines-1.1                                |       0B |    Oct 20    | 0
+engines-1.1/capi.so                        |     5.9K |    Oct 20    | 1
+engines-1.1/padlock.so                     |    22.4K |    Oct 20    | 1
+gconv                                      |       0B |    Oct 20    | 0
+gconv/ANSI_X3.110.so                       |    22.2K |    Oct 20    | 1
+gconv/ARMSCII-8.so                         |    10.2K |    Oct 20    | 1
+gconv/ASMO_449.so                          |    10.2K |    Oct 20    | 1
+gconv/BIG5.so                              |    86.2K |    Oct 20    | 1
+gconv/BIG5HKSCS.so                         |   230.2K |    Oct 20    | 2
+gconv/BRF.so                               |    10.2K |    Oct 20    | 1
+gconv/CP10007.so                           |    10.2K |    Oct 20    | 1
+gconv/CP1125.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1250.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1251.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1252.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1253.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1254.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1255.so                            |    14.2K |    Oct 20    | 1
+gconv/CP1256.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1257.so                            |    10.2K |    Oct 20    | 1
+gconv/CP1258.so                            |    14.2K |    Oct 20    | 1
+gconv/CP737.so                             |    10.2K |    Oct 20    | 1
+gconv/CP770.so                             |    10.2K |    Oct 20    | 1
+gconv/CP771.so                             |    10.2K |    Oct 20    | 1
+gconv/CP772.so                             |    10.2K |    Oct 20    | 1
+gconv/CP773.so                             |    10.2K |    Oct 20    | 1
+gconv/CP774.so                             |    10.2K |    Oct 20    | 1
+gconv/CP775.so                             |    10.2K |    Oct 20    | 1
+gconv/CP932.so                             |    94.2K |    Oct 20    | 1
+gconv/CSN_369103.so                        |    10.2K |    Oct 20    | 1
+gconv/CWI.so                               |    10.2K |    Oct 20    | 1
+gconv/DEC-MCS.so                           |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-AT-DE-A.so                    |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-AT-DE.so                      |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-CA-FR.so                      |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-DK-NO-A.so                    |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-DK-NO.so                      |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-ES-A.so                       |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-ES-S.so                       |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-ES.so                         |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-FI-SE-A.so                    |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-FI-SE.so                      |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-FR.so                         |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-IS-FRISS.so                   |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-IT.so                         |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-PT.so                         |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-UK.so                         |    10.2K |    Oct 20    | 1
+gconv/EBCDIC-US.so                         |    10.2K |    Oct 20    | 1
+gconv/ECMA-CYRILLIC.so                     |    10.2K |    Oct 20    | 1
+gconv/EUC-CN.so                            |    18.2K |    Oct 20    | 1
+gconv/EUC-JISX0213.so                      |    14.2K |    Oct 20    | 1
+gconv/EUC-JP-MS.so                         |    86.2K |    Oct 20    | 1
+gconv/EUC-JP.so                            |    14.2K |    Oct 20    | 1
+gconv/EUC-KR.so                            |    14.2K |    Oct 20    | 1
+gconv/EUC-TW.so                            |    22.2K |    Oct 20    | 1
+gconv/GB18030.so                           |   174.2K |    Oct 20    | 2
+gconv/GBBIG5.so                            |    54.2K |    Oct 20    | 1
+gconv/GBGBK.so                             |    10.2K |    Oct 20    | 1
+gconv/GBK.so                               |   110.2K |    Oct 20    | 1
+gconv/GEORGIAN-ACADEMY.so                  |    10.2K |    Oct 20    | 1
+gconv/GEORGIAN-PS.so                       |    10.2K |    Oct 20    | 1
+gconv/GOST_19768-74.so                     |    10.2K |    Oct 20    | 1
+gconv/GREEK-CCITT.so                       |    10.2K |    Oct 20    | 1
+gconv/GREEK7-OLD.so                        |    10.2K |    Oct 20    | 1
+gconv/GREEK7.so                            |    10.2K |    Oct 20    | 1
+gconv/HP-GREEK8.so                         |    10.2K |    Oct 20    | 1
+gconv/HP-ROMAN8.so                         |    10.2K |    Oct 20    | 1
+gconv/HP-ROMAN9.so                         |    10.2K |    Oct 20    | 1
+gconv/HP-THAI8.so                          |    10.2K |    Oct 20    | 1
+gconv/HP-TURKISH8.so                       |    10.2K |    Oct 20    | 1
+gconv/IBM037.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM038.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM1004.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1008.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1008_420.so                       |     6.2K |    Oct 20    | 1
+gconv/IBM1025.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1026.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1046.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1047.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1097.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1112.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1122.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1123.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1124.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1129.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1130.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1132.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1133.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1137.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1140.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1141.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1142.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1143.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1144.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1145.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1146.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1147.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1148.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1149.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1153.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1154.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1155.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1156.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1157.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1158.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1160.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1161.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1162.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1163.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1164.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1166.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM1167.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM12712.so                          |    10.2K |    Oct 20    | 1
+gconv/IBM1364.so                           |   146.2K |    Oct 20    | 2
+gconv/IBM1371.so                           |   126.2K |    Oct 20    | 1
+gconv/IBM1388.so                           |   170.2K |    Oct 20    | 2
+gconv/IBM1390.so                           |   226.2K |    Oct 20    | 2
+gconv/IBM1399.so                           |   226.2K |    Oct 20    | 2
+gconv/IBM16804.so                          |    10.2K |    Oct 20    | 1
+gconv/IBM256.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM273.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM274.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM275.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM277.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM278.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM280.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM281.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM284.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM285.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM290.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM297.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM420.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM423.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM424.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM437.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM4517.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM4899.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM4909.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM4971.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM500.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM5347.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM803.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM850.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM851.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM852.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM855.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM856.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM857.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM860.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM861.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM862.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM863.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM864.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM865.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM866.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM866NAV.so                         |    10.2K |    Oct 20    | 1
+gconv/IBM868.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM869.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM870.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM871.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM874.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM875.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM880.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM891.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM901.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM902.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM903.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM9030.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM904.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM905.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM9066.so                           |    10.2K |    Oct 20    | 1
+gconv/IBM918.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM921.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM922.so                            |    10.2K |    Oct 20    | 1
+gconv/IBM930.so                            |   106.2K |    Oct 20    | 1
+gconv/IBM932.so                            |    70.2K |    Oct 20    | 1
+gconv/IBM933.so                            |   122.2K |    Oct 20    | 1
+gconv/IBM935.so                            |    86.2K |    Oct 20    | 1
+gconv/IBM937.so                            |   110.2K |    Oct 20    | 1
+gconv/IBM939.so                            |   106.2K |    Oct 20    | 1
+gconv/IBM943.so                            |    70.2K |    Oct 20    | 1
+gconv/IBM9448.so                           |    10.2K |    Oct 20    | 1
+gconv/IEC_P27-1.so                         |    10.2K |    Oct 20    | 1
+gconv/INIS-8.so                            |    10.2K |    Oct 20    | 1
+gconv/INIS-CYRILLIC.so                     |    10.2K |    Oct 20    | 1
+gconv/INIS.so                              |    10.2K |    Oct 20    | 1
+gconv/ISIRI-3342.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO-2022-CN-EXT.so                   |    38.2K |    Oct 20    | 1
+gconv/ISO-2022-CN.so                       |    34.2K |    Oct 20    | 1
+gconv/ISO-2022-JP-3.so                     |    26.2K |    Oct 20    | 1
+gconv/ISO-2022-JP.so                       |    42.2K |    Oct 20    | 1
+gconv/ISO-2022-KR.so                       |    14.2K |    Oct 20    | 1
+gconv/ISO-IR-197.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO-IR-209.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO646.so                            |    18.3K |    Oct 20    | 1
+gconv/ISO8859-1.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-10.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-11.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-13.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-14.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-15.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-16.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO8859-2.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-3.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-4.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-5.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-6.so                         |    14.2K |    Oct 20    | 1
+gconv/ISO8859-7.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-8.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-9.so                         |    10.2K |    Oct 20    | 1
+gconv/ISO8859-9E.so                        |    10.2K |    Oct 20    | 1
+gconv/ISO_10367-BOX.so                     |    10.2K |    Oct 20    | 1
+gconv/ISO_11548-1.so                       |    10.2K |    Oct 20    | 1
+gconv/ISO_2033.so                          |    10.2K |    Oct 20    | 1
+gconv/ISO_5427-EXT.so                      |    10.2K |    Oct 20    | 1
+gconv/ISO_5427.so                          |    10.2K |    Oct 20    | 1
+gconv/ISO_5428.so                          |    10.2K |    Oct 20    | 1
+gconv/ISO_6937-2.so                        |    22.2K |    Oct 20    | 1
+gconv/ISO_6937.so                          |    22.2K |    Oct 20    | 1
+gconv/JOHAB.so                             |    18.2K |    Oct 20    | 1
+gconv/KOI-8.so                             |    10.2K |    Oct 20    | 1
+gconv/KOI8-R.so                            |    10.2K |    Oct 20    | 1
+gconv/KOI8-RU.so                           |    10.2K |    Oct 20    | 1
+gconv/KOI8-T.so                            |    10.2K |    Oct 20    | 1
+gconv/KOI8-U.so                            |    10.2K |    Oct 20    | 1
+gconv/LATIN-GREEK-1.so                     |    10.2K |    Oct 20    | 1
+gconv/LATIN-GREEK.so                       |    10.2K |    Oct 20    | 1
+gconv/MAC-CENTRALEUROPE.so                 |    10.2K |    Oct 20    | 1
+gconv/MAC-IS.so                            |    10.2K |    Oct 20    | 1
+gconv/MAC-SAMI.so                          |    10.2K |    Oct 20    | 1
+gconv/MAC-UK.so                            |    10.2K |    Oct 20    | 1
+gconv/MACINTOSH.so                         |    10.2K |    Oct 20    | 1
+gconv/MIK.so                               |    10.2K |    Oct 20    | 1
+gconv/NATS-DANO.so                         |    10.2K |    Oct 20    | 1
+gconv/NATS-SEFI.so                         |    10.2K |    Oct 20    | 1
+gconv/PT154.so                             |    10.2K |    Oct 20    | 1
+gconv/RK1048.so                            |    10.2K |    Oct 20    | 1
+gconv/SAMI-WS2.so                          |    10.2K |    Oct 20    | 1
+gconv/SHIFT_JISX0213.so                    |    18.2K |    Oct 20    | 1
+gconv/SJIS.so                              |    94.2K |    Oct 20    | 1
+gconv/T.61.so                              |    18.2K |    Oct 20    | 1
+gconv/TCVN5712-1.so                        |    14.2K |    Oct 20    | 1
+gconv/TIS-620.so                           |    10.2K |    Oct 20    | 1
+gconv/TSCII.so                             |    18.2K |    Oct 20    | 1
+gconv/UHC.so                               |    70.2K |    Oct 20    | 1
+gconv/UNICODE.so                           |    10.2K |    Oct 20    | 1
+gconv/UTF-16.so                            |    14.2K |    Oct 20    | 1
+gconv/UTF-32.so                            |    10.2K |    Oct 20    | 1
+gconv/UTF-7.so                             |    18.2K |    Oct 20    | 1
+gconv/VISCII.so                            |    10.2K |    Oct 20    | 1
+gconv/gconv-modules                        |    54.8K |    Oct 20    | 1
+gconv/gconv-modules.cache                  |    25.6K |    Oct 20    | 1
+gconv/libCNS.so                            |   458.0K |    Oct 20    | 4
+gconv/libGB.so                             |    66.0K |    Oct 20    | 1
+gconv/libISOIR165.so                       |    58.0K |    Oct 20    | 1
+gconv/libJIS.so                            |    98.0K |    Oct 20    | 1
+gconv/libJISX0213.so                       |   118.0K |    Oct 20    | 1
+gconv/libKSC.so                            |    46.0K |    Oct 20    | 1
+krb5                                       |       0B |    Oct 20    | 0
+krb5/plugins                               |       0B |    Oct 20    | 0
+krb5/plugins/krb5                          |       0B |    Oct 20    | 0
+libGeoIP.so.1                              |       0B | Jan 01 1970  | 0
+libGeoIP.so.1.6.9                          |   198.2K |    Oct 20    | 2
+libX11.so.6                                |       0B | Jan 01 1970  | 0
+libX11.so.6.3.0                            |     1.2M |    Oct 20    | 10
+libXau.so.6                                |       0B | Jan 01 1970  | 0
+libXau.so.6.0.0                            |    14.2K |    Oct 20    | 1
+libXdmcp.so.6                              |       0B | Jan 01 1970  | 0
+libXdmcp.so.6.0.0                          |    22.2K |    Oct 20    | 1
+libXext.so.6                               |       0B | Jan 01 1970  | 0
+libXext.so.6.4.0                           |    71.7K |    Oct 20    | 1
+libXmuu.so.1                               |       0B | Jan 01 1970  | 0
+libXmuu.so.1.0.0                           |    18.2K |    Oct 20    | 1
+libapt-inst.so.2.0                         |       0B | Jan 01 1970  | 0
+libapt-inst.so.2.0.0                       |    50.1K |    Oct 20    | 1
+libapt-pkg.so.5.0                          |       0B | Jan 01 1970  | 0
+libapt-pkg.so.5.0.1                        |     1.7M |    Oct 20    | 14
+libapt-private.so.0.0                      |       0B | Jan 01 1970  | 0
+libapt-private.so.0.0.0                    |   370.1K |    Oct 20    | 3
+libassuan.so.0                             |       0B | Jan 01 1970  | 0
+libassuan.so.0.7.3                         |    74.1K |    Oct 20    | 1
+libavahi-common.so.3                       |       0B | Jan 01 1970  | 0
+libavahi-common.so.3.5.3                   |    51.2K |    Oct 20    | 1
+libavahi-core.so.7                         |       0B | Jan 01 1970  | 0
+libavahi-core.so.7.0.2                     |   216.7K |    Oct 20    | 2
+libbind9.so.140                            |       0B | Jan 01 1970  | 0
+libbind9.so.140.0.10                       |    57.9K |    Oct 20    | 1
+libcrypto.so.1.0.2                         |     2.4M |    Oct 20    | 20
+libcrypto.so.1.1                           |     2.6M |    Oct 20    | 21
+libcurl-gnutls.so.3                        |       0B | Jan 01 1970  | 0
+libcurl-gnutls.so.4                        |       0B | Jan 01 1970  | 0
+libcurl-gnutls.so.4.4.0                    |   506.4K |    Oct 20    | 4
+libdaemon.so.0                             |       0B | Jan 01 1970  | 0
+libdaemon.so.0.5.0                         |    26.5K |    Oct 20    | 1
+libdb-5.3.so                               |     1.7M |    Oct 20    | 14
+libdebconfclient.so.0                      |       0B | Jan 01 1970  | 0
+libdebconfclient.so.0.0.0                  |    10.1K |    Oct 20    | 1
+libdns-pkcs11.so.162                       |       0B | Jan 01 1970  | 0
+libdns-pkcs11.so.162.1.3                   |     2.0M |    Oct 20    | 16
+libdns.so.162                              |       0B | Jan 01 1970  | 0
+libdns.so.162.1.3                          |     2.0M |    Oct 20    | 16
+libedit.so.2                               |       0B | Jan 01 1970  | 0
+libedit.so.2.0.55                          |   207.7K |    Oct 20    | 2
+libelf-0.168.so                            |    94.6K |    Oct 20    | 1
+libelf.so.1                                |       0B | Jan 01 1970  | 0
+libestr.so.0                               |       0B | Jan 01 1970  | 0
+libestr.so.0.0.0                           |    14.1K |    Oct 20    | 1
+libexpatw.so.1                             |       0B | Jan 01 1970  | 0
+libexpatw.so.1.6.2                         |   166.1K |    Oct 20    | 2
+libfam.so.0                                |       0B | Jan 01 1970  | 0
+libfam.so.0.0.0                            |    34.7K |    Oct 20    | 1
+libfastjson.so.4                           |       0B | Jan 01 1970  | 0
+libfastjson.so.4.0.0                       |    38.5K |    Oct 20    | 1
+libffi.so.6                                |       0B | Jan 01 1970  | 0
+libffi.so.6.0.4                            |    34.5K |    Oct 20    | 1
+libform.so.5                               |       0B | Jan 01 1970  | 0
+libform.so.5.9                             |    63.2K |    Oct 20    | 1
+libformw.so.5                              |       0B | Jan 01 1970  | 0
+libformw.so.5.9                            |    67.2K |    Oct 20    | 1
+libfreetype.so.6                           |       0B | Jan 01 1970  | 0
+libfreetype.so.6.12.3                      |   699.9K |    Oct 20    | 6
+libgdbm.so.3                               |       0B | Jan 01 1970  | 0
+libgdbm.so.3.0.0                           |    26.3K |    Oct 20    | 1
+libgdbm_compat.so.3                        |       0B | Jan 01 1970  | 0
+libgdbm_compat.so.3.0.0                    |     9.9K |    Oct 20    | 1
+libgmp.so.10                               |       0B | Jan 01 1970  | 0
+libgmp.so.10.3.2                           |   524.9K |    Oct 20    | 5
+libgnutls.so.30                            |       0B | Jan 01 1970  | 0
+libgnutls.so.30.13.1                       |     1.6M |    Oct 20    | 13
+libgpm.so.2                                |    22.5K |    Oct 20    | 1
+libgssapi_krb5.so.2                        |       0B | Jan 01 1970  | 0
+libgssapi_krb5.so.2.2                      |   298.5K |    Oct 20    | 3
+libhogweed.so.4                            |       0B | Jan 01 1970  | 0
+libhogweed.so.4.3                          |   211.7K |    Oct 20    | 2
+libicudata.so.57                           |       0B | Jan 01 1970  | 0
+libicudata.so.57.1                         |    24.5M |    Oct 20    | 196
+libicui18n.so.57                           |       0B | Jan 01 1970  | 0
+libicui18n.so.57.1                         |     2.5M |    Oct 20    | 20
+libicuio.so.57                             |       0B | Jan 01 1970  | 0
+libicuio.so.57.1                           |    54.7K |    Oct 20    | 1
+libicule.so.57                             |       0B | Jan 01 1970  | 0
+libicule.so.57.1                           |   342.3K |    Oct 20    | 3
+libiculx.so.57                             |       0B | Jan 01 1970  | 0
+libiculx.so.57.1                           |    46.5K |    Oct 20    | 1
+libicutest.so.57                           |       0B | Jan 01 1970  | 0
+libicutest.so.57.1                         |    64.3K |    Oct 20    | 1
+libicutu.so.57                             |       0B | Jan 01 1970  | 0
+libicutu.so.57.1                           |   196.6K |    Oct 20    | 2
+libicuuc.so.57                             |       0B | Jan 01 1970  | 0
+libicuuc.so.57.1                           |     1.6M |    Oct 20    | 14
+libidn2.so.0                               |       0B | Jan 01 1970  | 0
+libidn2.so.0.1.4                           |   134.0K |    Oct 20    | 2
+libip4tc.so.0                              |       0B | Jan 01 1970  | 0
+libip4tc.so.0.1.0                          |    26.5K |    Oct 20    | 1
+libip6tc.so.0                              |       0B | Jan 01 1970  | 0
+libip6tc.so.0.1.0                          |    30.5K |    Oct 20    | 1
+libiptc.so.0                               |       0B | Jan 01 1970  | 0
+libiptc.so.0.0.0                           |     5.7K |    Oct 20    | 1
+libisc-pkcs11.so.160                       |       0B | Jan 01 1970  | 0
+libisc-pkcs11.so.160.0.0                   |   456.1K |    Oct 20    | 4
+libisc.so.160                              |       0B | Jan 01 1970  | 0
+libisc.so.160.0.0                          |   464.1K |    Oct 20    | 4
+libisccc.so.140                            |       0B | Jan 01 1970  | 0
+libisccc.so.140.0.4                        |    38.2K |    Oct 20    | 1
+libisccfg.so.140                           |       0B | Jan 01 1970  | 0
+libisccfg.so.140.3.0                       |   155.4K |    Oct 20    | 2
+libk5crypto.so.3                           |       0B | Jan 01 1970  | 0
+libk5crypto.so.3.1                         |   198.9K |    Oct 20    | 2
+libkrb5.so.3                               |       0B | Jan 01 1970  | 0
+libkrb5.so.3.3                             |   871.7K |    Oct 20    | 7
+libkrb5support.so.0                        |       0B | Jan 01 1970  | 0
+libkrb5support.so.0.1                      |    47.0K |    Oct 20    | 1
+libksba.so.8                               |       0B | Jan 01 1970  | 0
+libksba.so.8.11.6                          |   222.0K |    Oct 20    | 2
+liblber-2.4.so.2                           |       0B | Jan 01 1970  | 0
+liblber-2.4.so.2.10.7                      |    58.2K |    Oct 20    | 1
+libldap-2.4.so.2                           |       0B | Jan 01 1970  | 0
+libldap_r-2.4.so.2                         |       0B | Jan 01 1970  | 0
+libldap_r-2.4.so.2.10.7                    |   315.3K |    Oct 20    | 3
+liblogging-stdlog.so.0                     |       0B | Jan 01 1970  | 0
+liblogging-stdlog.so.0.0.0                 |    18.2K |    Oct 20    | 1
+liblognorm.so.5                            |       0B | Jan 01 1970  | 0
+liblognorm.so.5.0.0                        |   135.1K |    Oct 20    | 2
+liblwres.so.141                            |       0B | Jan 01 1970  | 0
+liblwres.so.141.0.3                        |    73.9K |    Oct 20    | 1
+liblz4.so.1                                |       0B | Jan 01 1970  | 0
+liblz4.so.1.7.1                            |    70.3K |    Oct 20    | 1
+libmagic.so.1                              |       0B | Jan 01 1970  | 0
+libmagic.so.1.0.0                          |   134.2K |    Oct 20    | 2
+libmenu.so.5                               |       0B | Jan 01 1970  | 0
+libmenu.so.5.9                             |    34.3K |    Oct 20    | 1
+libmenuw.so.5                              |       0B | Jan 01 1970  | 0
+libmenuw.so.5.9                            |    34.3K |    Oct 20    | 1
+libnetfilter_conntrack.so.3                |       0B | Jan 01 1970  | 0
+libnetfilter_conntrack.so.3.6.0            |   118.6K |    Oct 20    | 1
+libnetsnmp.so.30                           |       0B | Jan 01 1970  | 0
+libnetsnmp.so.30.0.3                       |   693.0K |    Oct 20    | 6
+libnetsnmpagent.so.30                      |       0B | Jan 01 1970  | 0
+libnetsnmpagent.so.30.0.3                  |   430.2K |    Oct 20    | 4
+libnetsnmphelpers.so.30                    |       0B | Jan 01 1970  | 0
+libnetsnmphelpers.so.30.0.3                |     5.8K |    Oct 20    | 1
+libnetsnmpmibs.so.30                       |       0B | Jan 01 1970  | 0
+libnetsnmpmibs.so.30.0.3                   |     1.4M |    Oct 20    | 11
+libnetsnmptrapd.so.30                      |       0B | Jan 01 1970  | 0
+libnetsnmptrapd.so.30.0.3                  |    55.1K |    Oct 20    | 1
+libnettle.so.6                             |       0B | Jan 01 1970  | 0
+libnettle.so.6.3                           |   219.2K |    Oct 20    | 2
+libnewt.so.0.52                            |       0B | Jan 01 1970  | 0
+libnewt.so.0.52.19                         |    96.0K |    Oct 20    | 1
+libnfnetlink.so.0                          |       0B | Jan 01 1970  | 0
+libnfnetlink.so.0.2.0                      |    25.8K |    Oct 20    | 1
+libnghttp2.so.14                           |       0B | Jan 01 1970  | 0
+libnghttp2.so.14.12.3                      |   150.0K |    Oct 20    | 2
+libnl-route-3.so.200                       |       0B | Jan 01 1970  | 0
+libnl-route-3.so.200.22.0                  |   402.1K |    Oct 20    | 4
+libnpth.so.0                               |       0B | Jan 01 1970  | 0
+libnpth.so.0.0.6                           |    18.5K |    Oct 20    | 1
+libopensc.so.4                             |       0B | Jan 01 1970  | 0
+libopensc.so.4.0.0                         |     1.7M |    Oct 20    | 14
+libp11-kit.so.0                            |       0B | Jan 01 1970  | 0
+libp11-kit.so.0.2.0                        |   402.0K |    Oct 20    | 4
+libpanel.so.5                              |       0B | Jan 01 1970  | 0
+libpanel.so.5.9                            |    13.9K |    Oct 20    | 1
+libpanelw.so.5                             |       0B | Jan 01 1970  | 0
+libpanelw.so.5.9                           |    13.9K |    Oct 20    | 1
+libpcap.so.0.8                             |       0B | Jan 01 1970  | 0
+libpcap.so.1.8.1                           |   263.5K |    Oct 20    | 3
+libpcreposix.so.3                          |       0B | Jan 01 1970  | 0
+libpcreposix.so.3.13.3                     |     9.9K |    Oct 20    | 1
+libpcsclite.so.1                           |       0B | Jan 01 1970  | 0
+libpcsclite.so.1.0.0                       |    41.8K |    Oct 20    | 1
+libperl.so.5.24                            |       0B | Jan 01 1970  | 0
+libperl.so.5.24.1                          |     2.0M |    Oct 20    | 16
+libpipeline.so.1                           |       0B | Jan 01 1970  | 0
+libpipeline.so.1.4.1                       |    53.8K |    Oct 20    | 1
+libpkcs11-helper.so.1                      |       0B | Jan 01 1970  | 0
+libpkcs11-helper.so.1.0.0                  |   111.1K |    Oct 20    | 1
+libpng16.so.16                             |       0B | Jan 01 1970  | 0
+libpng16.so.16.28.0                        |   201.9K |    Oct 20    | 2
+libpsl.so.5                                |       0B | Jan 01 1970  | 0
+libpsl.so.5.1.1                            |    53.8K |    Oct 20    | 1
+librtmp.so.1                               |   115.5K |    Oct 20    | 1
+libsasl2.so.2                              |       0B | Jan 01 1970  | 0
+libsasl2.so.2.0.25                         |   106.7K |    Oct 20    | 1
+libsemanage.so.1                           |   242.2K |    Oct 20    | 2
+libsensors.so.4                            |       0B | Jan 01 1970  | 0
+libsensors.so.4.4.0                        |    58.5K |    Oct 20    | 1
+libsmm-local.so.4                          |       0B | Jan 01 1970  | 0
+libsmm-local.so.4.0.0                      |    70.5K |    Oct 20    | 1
+libsnmp.so.30                              |       0B | Jan 01 1970  | 0
+libsnmp.so.30.0.3                          |   693.0K |    Oct 20    | 6
+libsqlite3.so.0                            |       0B | Jan 01 1970  | 0
+libsqlite3.so.0.8.6                        |     1.0M |    Oct 20    | 9
+libssh2.so.1                               |       0B | Jan 01 1970  | 0
+libssh2.so.1.0.1                           |   175.3K |    Oct 20    | 2
+libssl.so.1.0.2                            |   421.1K |    Oct 20    | 4
+libssl.so.1.1                              |   432.5K |    Oct 20    | 4
+libstdc++.so.6                             |       0B | Jan 01 1970  | 0
+libstdc++.so.6.0.22                        |     1.5M |    Oct 20    | 12
+libtasn1.so.6                              |       0B | Jan 01 1970  | 0
+libtasn1.so.6.5.3                          |    74.0K |    Oct 20    | 1
+libtic.so.5                                |       0B | Jan 01 1970  | 0
+libtic.so.5.9                              |    58.0K |    Oct 20    | 1
+libunistring.so.0                          |       0B | Jan 01 1970  | 0
+libunistring.so.0.1.2                      |     1.1M |    Oct 20    | 9
+libustr-1.0.so.1                           |       0B | Jan 01 1970  | 0
+libustr-1.0.so.1.0.4                       |   210.0K |    Oct 20    | 2
+libxapian.so.30                            |       0B | Jan 01 1970  | 0
+libxapian.so.30.3.0                        |     2.1M |    Oct 20    | 17
+libxcb.so.1                                |       0B | Jan 01 1970  | 0
+libxcb.so.1.1.0                            |   159.0K |    Oct 20    | 2
+libxml2.so.2                               |       0B | Jan 01 1970  | 0
+libxml2.so.2.9.4                           |     1.7M |    Oct 20    | 14
+libxtables.so.12                           |       0B | Jan 01 1970  | 0
+libxtables.so.12.0.0                       |    49.9K |    Oct 20    | 1
+onepin-opensc-pkcs11.so                    |   203.0K |    Oct 20    | 2
+opensc-pkcs11.so                           |   203.0K |    Oct 20    | 2
+openssl-1.0.2                              |       0B |    Oct 20    | 0
+openssl-1.0.2/engines                      |       0B |    Oct 20    | 0
+openssl-1.0.2/engines/lib4758cca.so        |    19.0K |    Oct 20    | 1
+openssl-1.0.2/engines/libaep.so            |    19.3K |    Oct 20    | 1
+openssl-1.0.2/engines/libatalla.so         |    15.1K |    Oct 20    | 1
+openssl-1.0.2/engines/libcapi.so           |     5.9K |    Oct 20    | 1
+openssl-1.0.2/engines/libchil.so           |    23.6K |    Oct 20    | 1
+openssl-1.0.2/engines/libcswift.so         |    23.3K |    Oct 20    | 1
+openssl-1.0.2/engines/libgmp.so            |     5.9K |    Oct 20    | 1
+openssl-1.0.2/engines/libgost.so           |    91.1K |    Oct 20    | 1
+openssl-1.0.2/engines/libnuron.so          |    15.0K |    Oct 20    | 1
+openssl-1.0.2/engines/libpadlock.so        |     5.9K |    Oct 20    | 1
+openssl-1.0.2/engines/libsureware.so       |    23.4K |    Oct 20    | 1
+openssl-1.0.2/engines/libubsec.so          |    19.2K |    Oct 20    | 1
+perl-base                                  |       0B |    Oct 20    | 0
+perl-base/AutoLoader.pm                    |     5.4K |    Oct 20    | 1
+perl-base/Carp                             |       0B |    Oct 20    | 0
+perl-base/Carp.pm                          |    19.7K |    Oct 20    | 1
+perl-base/Carp/Heavy.pm                    |     773B |    Oct 20    | 1
+perl-base/Config.pm                        |     3.3K |    Oct 20    | 1
+perl-base/Config_git.pl                    |     409B |    Oct 20    | 1
+perl-base/Config_heavy.pl                  |    49.5K |    Oct 20    | 1
+perl-base/Cwd.pm                           |    18.1K |    Oct 20    | 1
+perl-base/DynaLoader.pm                    |    10.2K |    Oct 20    | 1
+perl-base/Errno.pm                         |     4.8K |    Oct 20    | 1
+perl-base/Exporter                         |       0B |    Oct 20    | 0
+perl-base/Exporter.pm                      |     2.3K |    Oct 20    | 1
+perl-base/Exporter/Heavy.pm                |     6.3K |    Oct 20    | 1
+perl-base/Fcntl.pm                         |     2.1K |    Oct 20    | 1
+perl-base/File                             |       0B |    Oct 20    | 0
+perl-base/File/Basename.pm                 |     5.3K |    Oct 20    | 1
+perl-base/File/Glob.pm                     |     1.8K |    Oct 20    | 1
+perl-base/File/Path.pm                     |    18.1K |    Oct 20    | 1
+perl-base/File/Spec                        |       0B |    Oct 20    | 0
+perl-base/File/Spec.pm                     |     622B |    Oct 20    | 1
+perl-base/File/Spec/Unix.pm                |     9.8K |    Oct 20    | 1
+perl-base/File/Temp.pm                     |    45.8K |    Oct 20    | 1
+perl-base/FileHandle.pm                    |     2.1K |    Oct 20    | 1
+perl-base/Getopt                           |       0B |    Oct 20    | 0
+perl-base/Getopt/Long.pm                   |    42.3K |    Oct 20    | 1
+perl-base/Hash                             |       0B |    Oct 20    | 0
+perl-base/Hash/Util.pm                     |     7.4K |    Oct 20    | 1
+perl-base/IO                               |       0B |    Oct 20    | 0
+perl-base/IO.pm                            |     472B |    Oct 20    | 1
+perl-base/IO/File.pm                       |     1.6K |    Oct 20    | 1
+perl-base/IO/Handle.pm                     |     8.0K |    Oct 20    | 1
+perl-base/IO/Pipe.pm                       |     3.3K |    Oct 20    | 1
+perl-base/IO/Seekable.pm                   |     686B |    Oct 20    | 1
+perl-base/IO/Select.pm                     |     4.3K |    Oct 20    | 1
+perl-base/IO/Socket                        |       0B |    Oct 20    | 0
+perl-base/IO/Socket.pm                     |     9.2K |    Oct 20    | 1
+perl-base/IO/Socket/INET.pm                |     7.3K |    Oct 20    | 1
+perl-base/IO/Socket/IP.pm                  |    19.9K |    Oct 20    | 1
+perl-base/IO/Socket/UNIX.pm                |     1.3K |    Oct 20    | 1
+perl-base/IPC                              |       0B |    Oct 20    | 0
+perl-base/IPC/Open2.pm                     |     816B |    Oct 20    | 1
+perl-base/IPC/Open3.pm                     |     8.8K |    Oct 20    | 1
+perl-base/List                             |       0B |    Oct 20    | 0
+perl-base/List/Util.pm                     |     1.1K |    Oct 20    | 1
+perl-base/POSIX.pm                         |    19.4K |    Oct 20    | 1
+perl-base/Scalar                           |       0B |    Oct 20    | 0
+perl-base/Scalar/Util.pm                   |     1.4K |    Oct 20    | 1
+perl-base/SelectSaver.pm                   |     344B |    Oct 20    | 1
+perl-base/Socket.pm                        |    13.2K |    Oct 20    | 1
+perl-base/Symbol.pm                        |     2.0K |    Oct 20    | 1
+perl-base/Text                             |       0B |    Oct 20    | 0
+perl-base/Text/ParseWords.pm               |     4.4K |    Oct 20    | 1
+perl-base/Text/Tabs.pm                     |     1.7K |    Oct 20    | 1
+perl-base/Text/Wrap.pm                     |     2.9K |    Oct 20    | 1
+perl-base/Tie                              |       0B |    Oct 20    | 0
+perl-base/Tie/Hash.pm                      |     2.0K |    Oct 20    | 1
+perl-base/XSLoader.pm                      |     3.8K |    Oct 20    | 1
+perl-base/attributes.pm                    |     2.9K |    Oct 20    | 1
+perl-base/auto                             |       0B |    Oct 20    | 0
+perl-base/auto/Cwd                         |       0B |    Oct 20    | 0
+perl-base/auto/Cwd/Cwd.so                  |    18.3K |    Oct 20    | 1
+perl-base/auto/Fcntl                       |       0B |    Oct 20    | 0
+perl-base/auto/Fcntl/Fcntl.so              |    18.2K |    Oct 20    | 1
+perl-base/auto/File                        |       0B |    Oct 20    | 0
+perl-base/auto/File/Glob                   |       0B |    Oct 20    | 0
+perl-base/auto/File/Glob/Glob.so           |    26.5K |    Oct 20    | 1
+perl-base/auto/Hash                        |       0B |    Oct 20    | 0
+perl-base/auto/Hash/Util                   |       0B |    Oct 20    | 0
+perl-base/auto/Hash/Util/Util.so           |    14.2K |    Oct 20    | 1
+perl-base/auto/IO                          |       0B |    Oct 20    | 0
+perl-base/auto/IO/IO.so                    |    18.3K |    Oct 20    | 1
+perl-base/auto/List                        |       0B |    Oct 20    | 0
+perl-base/auto/List/Util                   |       0B |    Oct 20    | 0
+perl-base/auto/List/Util/Util.so           |    46.6K |    Oct 20    | 1
+perl-base/auto/POSIX                       |       0B |    Oct 20    | 0
+perl-base/auto/POSIX/POSIX.so              |   103.6K |    Oct 20    | 1
+perl-base/auto/Socket                      |       0B |    Oct 20    | 0
+perl-base/auto/Socket/Socket.so            |    42.4K |    Oct 20    | 1
+perl-base/auto/attributes                  |       0B |    Oct 20    | 0
+perl-base/auto/attributes/attributes.so    |    10.2K |    Oct 20    | 1
+perl-base/auto/re                          |       0B |    Oct 20    | 0
+perl-base/auto/re/re.so                    |   483.5K |    Oct 20    | 4
+perl-base/base.pm                          |     8.7K |    Oct 20    | 1
+perl-base/bytes.pm                         |     447B |    Oct 20    | 1
+perl-base/bytes_heavy.pl                   |     758B |    Oct 20    | 1
+perl-base/constant.pm                      |     5.6K |    Oct 20    | 1
+perl-base/feature.pm                       |     4.2K |    Oct 20    | 1
+perl-base/fields.pm                        |     4.9K |    Oct 20    | 1
+perl-base/integer.pm                       |     172B |    Oct 20    | 1
+perl-base/lib.pm                           |     2.2K |    Oct 20    | 1
+perl-base/locale.pm                        |     3.3K |    Oct 20    | 1
+perl-base/overload.pm                      |     4.4K |    Oct 20    | 1
+perl-base/overloading.pm                   |     964B |    Oct 20    | 1
+perl-base/parent.pm                        |     479B |    Oct 20    | 1
+perl-base/re.pm                            |     8.4K |    Oct 20    | 1
+perl-base/strict.pm                        |     1.6K |    Oct 20    | 1
+perl-base/unicore                          |       0B |    Oct 20    | 0
+perl-base/unicore/Heavy.pl                 |   126.5K |    Oct 20    | 1
+perl-base/unicore/To                       |       0B |    Oct 20    | 0
+perl-base/unicore/To/Age.pl                |    17.5K |    Oct 20    | 1
+perl-base/unicore/To/Bc.pl                 |     7.7K |    Oct 20    | 1
+perl-base/unicore/To/Bmg.pl                |     5.0K |    Oct 20    | 1
+perl-base/unicore/To/Bpb.pl                |     2.1K |    Oct 20    | 1
+perl-base/unicore/To/Bpt.pl                |     1.7K |    Oct 20    | 1
+perl-base/unicore/To/Cf.pl                 |    15.0K |    Oct 20    | 1
+perl-base/unicore/To/Digit.pl              |     5.5K |    Oct 20    | 1
+perl-base/unicore/To/Ea.pl                 |     2.9K |    Oct 20    | 1
+perl-base/unicore/To/Fold.pl               |    22.2K |    Oct 20    | 1
+perl-base/unicore/To/GCB.pl                |    17.0K |    Oct 20    | 1
+perl-base/unicore/To/Gc.pl                 |    31.0K |    Oct 20    | 1
+perl-base/unicore/To/Hst.pl                |     9.8K |    Oct 20    | 1
+perl-base/unicore/To/InPC.pl               |     7.5K |    Oct 20    | 1
+perl-base/unicore/To/InSC.pl               |    13.0K |    Oct 20    | 1
+perl-base/unicore/To/Isc.pl                |     798B |    Oct 20    | 1
+perl-base/unicore/To/Jg.pl                 |     3.0K |    Oct 20    | 1
+perl-base/unicore/To/Jt.pl                 |     4.6K |    Oct 20    | 1
+perl-base/unicore/To/Lb.pl                 |    28.4K |    Oct 20    | 1
+perl-base/unicore/To/Lc.pl                 |     8.0K |    Oct 20    | 1
+perl-base/unicore/To/Lower.pl              |    15.2K |    Oct 20    | 1
+perl-base/unicore/To/NFCQC.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/To/NFDQC.pl              |     2.9K |    Oct 20    | 1
+perl-base/unicore/To/NFKCCF.pl             |   389.0K |    Oct 20    | 4
+perl-base/unicore/To/NFKCQC.pl             |     3.6K |    Oct 20    | 1
+perl-base/unicore/To/NFKDQC.pl             |     4.6K |    Oct 20    | 1
+perl-base/unicore/To/Na1.pl                |    62.1K |    Oct 20    | 1
+perl-base/unicore/To/NameAlia.pl           |    13.1K |    Oct 20    | 1
+perl-base/unicore/To/Nt.pl                 |     4.1K |    Oct 20    | 1
+perl-base/unicore/To/Nv.pl                 |     7.3K |    Oct 20    | 1
+perl-base/unicore/To/PerlDeci.pl           |     1.6K |    Oct 20    | 1
+perl-base/unicore/To/SB.pl                 |    30.4K |    Oct 20    | 1
+perl-base/unicore/To/Sc.pl                 |    14.8K |    Oct 20    | 1
+perl-base/unicore/To/Scx.pl                |    17.4K |    Oct 20    | 1
+perl-base/unicore/To/Tc.pl                 |    11.3K |    Oct 20    | 1
+perl-base/unicore/To/Title.pl              |    18.5K |    Oct 20    | 1
+perl-base/unicore/To/Uc.pl                 |    14.8K |    Oct 20    | 1
+perl-base/unicore/To/Upper.pl              |    21.8K |    Oct 20    | 1
+perl-base/unicore/To/WB.pl                 |    14.8K |    Oct 20    | 1
+perl-base/unicore/To/_PerlLB.pl            |    27.7K |    Oct 20    | 1
+perl-base/unicore/To/_PerlWB.pl            |    15.0K |    Oct 20    | 1
+perl-base/unicore/lib                      |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Age                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Age/NA.pl            |     7.5K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V11.pl           |     3.4K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V20.pl           |     841B |    Oct 20    | 1
+perl-base/unicore/lib/Age/V30.pl           |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V31.pl           |     978B |    Oct 20    | 1
+perl-base/unicore/lib/Age/V32.pl           |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V40.pl           |     1.3K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V41.pl           |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V50.pl           |     870B |    Oct 20    | 1
+perl-base/unicore/lib/Age/V51.pl           |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V52.pl           |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V60.pl           |     1.8K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V61.pl           |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V70.pl           |     2.2K |    Oct 20    | 1
+perl-base/unicore/lib/Age/V80.pl           |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Alpha                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Alpha/Y.pl           |     7.2K |    Oct 20    | 1
+perl-base/unicore/lib/Bc                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Bc/AL.pl             |     708B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/AN.pl             |     542B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/B.pl              |     526B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/BN.pl             |     882B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/CS.pl             |     618B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/EN.pl             |     614B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/ES.pl             |     580B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/ET.pl             |     714B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/L.pl              |     4.8K |    Oct 20    | 1
+perl-base/unicore/lib/Bc/NSM.pl            |     3.3K |    Oct 20    | 1
+perl-base/unicore/lib/Bc/ON.pl             |     2.4K |    Oct 20    | 1
+perl-base/unicore/lib/Bc/R.pl              |     838B |    Oct 20    | 1
+perl-base/unicore/lib/Bc/WS.pl             |     554B |    Oct 20    | 1
+perl-base/unicore/lib/BidiC                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/BidiC/Y.pl           |     529B |    Oct 20    | 1
+perl-base/unicore/lib/BidiM                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/BidiM/Y.pl           |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Blk                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Blk/NB.pl            |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/Bpt                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Bpt/C.pl             |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Bpt/N.pl             |     800B |    Oct 20    | 1
+perl-base/unicore/lib/Bpt/O.pl             |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/CE                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CE/Y.pl              |     846B |    Oct 20    | 1
+perl-base/unicore/lib/CI                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CI/Y.pl              |     4.1K |    Oct 20    | 1
+perl-base/unicore/lib/CWCF                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWCF/Y.pl            |     6.3K |    Oct 20    | 1
+perl-base/unicore/lib/CWCM                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWCM/Y.pl            |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/CWKCF                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWKCF/Y.pl           |     8.8K |    Oct 20    | 1
+perl-base/unicore/lib/CWL                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWL/Y.pl             |     6.2K |    Oct 20    | 1
+perl-base/unicore/lib/CWT                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWT/Y.pl             |     6.4K |    Oct 20    | 1
+perl-base/unicore/lib/CWU                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CWU/Y.pl             |     6.4K |    Oct 20    | 1
+perl-base/unicore/lib/Cased                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Cased/Y.pl           |     1.9K |    Oct 20    | 1
+perl-base/unicore/lib/Ccc                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Ccc/A.pl             |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/AR.pl            |     525B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/ATAR.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/B.pl             |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/BR.pl            |     531B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/DB.pl            |     523B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/NK.pl            |     710B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/NR.pl            |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/OV.pl            |     610B |    Oct 20    | 1
+perl-base/unicore/lib/Ccc/VR.pl            |     942B |    Oct 20    | 1
+perl-base/unicore/lib/CompEx               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/CompEx/Y.pl          |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/DI                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/DI/Y.pl              |     678B |    Oct 20    | 1
+perl-base/unicore/lib/Dash                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Dash/Y.pl            |     718B |    Oct 20    | 1
+perl-base/unicore/lib/Dep                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Dep/Y.pl             |     586B |    Oct 20    | 1
+perl-base/unicore/lib/Dia                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Dia/Y.pl             |     2.0K |    Oct 20    | 1
+perl-base/unicore/lib/Dt                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Dt/Com.pl            |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Enc.pl            |     586B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Fin.pl            |     1.8K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Font.pl           |     1.3K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Init.pl           |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Iso.pl            |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Med.pl            |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Nar.pl            |     562B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Nb.pl             |     538B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/NonCanon.pl       |     2.6K |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Sqr.pl            |     606B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Sub.pl            |     531B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Sup.pl            |     738B |    Oct 20    | 1
+perl-base/unicore/lib/Dt/Vert.pl           |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Ea                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Ea/A.pl              |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Ea/H.pl              |     572B |    Oct 20    | 1
+perl-base/unicore/lib/Ea/N.pl              |     2.6K |    Oct 20    | 1
+perl-base/unicore/lib/Ea/Na.pl             |     553B |    Oct 20    | 1
+perl-base/unicore/lib/Ea/W.pl              |     896B |    Oct 20    | 1
+perl-base/unicore/lib/Ext                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Ext/Y.pl             |     776B |    Oct 20    | 1
+perl-base/unicore/lib/GCB                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/GCB/CN.pl            |     717B |    Oct 20    | 1
+perl-base/unicore/lib/GCB/EX.pl            |     3.5K |    Oct 20    | 1
+perl-base/unicore/lib/GCB/LV.pl            |     5.2K |    Oct 20    | 1
+perl-base/unicore/lib/GCB/LVT.pl           |     5.2K |    Oct 20    | 1
+perl-base/unicore/lib/GCB/SM.pl            |     1.9K |    Oct 20    | 1
+perl-base/unicore/lib/GCB/XX.pl            |     3.2K |    Oct 20    | 1
+perl-base/unicore/lib/Gc                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Gc/C.pl              |     7.4K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Cf.pl             |     680B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Cn.pl             |     7.3K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/L.pl              |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/LC.pl             |     1.8K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Ll.pl             |     6.8K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Lm.pl             |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Lo.pl             |     5.2K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Lu.pl             |     6.7K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/M.pl              |     3.0K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Mc.pl             |     2.0K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Me.pl             |     542B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Mn.pl             |     3.3K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/N.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Nd.pl             |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Nl.pl             |     628B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/No.pl             |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/P.pl              |     2.2K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Pd.pl             |     678B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Pe.pl             |     1.3K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Pf.pl             |     600B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Pi.pl             |     610B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Po.pl             |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Ps.pl             |     1.3K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/S.pl              |     2.9K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Sc.pl             |     666B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Sk.pl             |     772B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Sm.pl             |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/So.pl             |     2.4K |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Z.pl              |     566B |    Oct 20    | 1
+perl-base/unicore/lib/Gc/Zs.pl             |     556B |    Oct 20    | 1
+perl-base/unicore/lib/GrBase               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/GrBase/Y.pl          |     8.7K |    Oct 20    | 1
+perl-base/unicore/lib/Hex                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Hex/Y.pl             |     545B |    Oct 20    | 1
+perl-base/unicore/lib/Hst                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Hst/NA.pl            |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Hyphen               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Hyphen/T.pl          |     594B |    Oct 20    | 1
+perl-base/unicore/lib/IDC                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/IDC/Y.pl             |     7.6K |    Oct 20    | 1
+perl-base/unicore/lib/IDS                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/IDS/Y.pl             |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/Ideo                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Ideo/Y.pl            |     644B |    Oct 20    | 1
+perl-base/unicore/lib/In                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/In/2_0.pl            |     3.7K |    Oct 20    | 1
+perl-base/unicore/lib/In/2_1.pl            |     3.7K |    Oct 20    | 1
+perl-base/unicore/lib/In/3_0.pl            |     4.2K |    Oct 20    | 1
+perl-base/unicore/lib/In/3_1.pl            |     4.7K |    Oct 20    | 1
+perl-base/unicore/lib/In/3_2.pl            |     4.6K |    Oct 20    | 1
+perl-base/unicore/lib/In/4_0.pl            |     4.8K |    Oct 20    | 1
+perl-base/unicore/lib/In/4_1.pl            |     5.0K |    Oct 20    | 1
+perl-base/unicore/lib/In/5_0.pl            |     5.2K |    Oct 20    | 1
+perl-base/unicore/lib/In/5_1.pl            |     5.4K |    Oct 20    | 1
+perl-base/unicore/lib/In/5_2.pl            |     5.9K |    Oct 20    | 1
+perl-base/unicore/lib/In/6_0.pl            |     6.1K |    Oct 20    | 1
+perl-base/unicore/lib/In/6_1.pl            |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/In/6_2.pl            |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/In/6_3.pl            |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/In/7_0.pl            |     7.3K |    Oct 20    | 1
+perl-base/unicore/lib/In/8_0.pl            |     7.5K |    Oct 20    | 1
+perl-base/unicore/lib/InPC                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/InPC/Bottom.pl       |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/InPC/Left.pl         |     902B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/LeftAndR.pl     |     628B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/NA.pl           |     2.3K |    Oct 20    | 1
+perl-base/unicore/lib/InPC/Overstru.pl     |     533B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/Right.pl        |     1.9K |    Oct 20    | 1
+perl-base/unicore/lib/InPC/Top.pl          |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/InPC/TopAndBo.pl     |     552B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/TopAndL2.pl     |     531B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/TopAndLe.pl     |     554B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/TopAndRi.pl     |     584B |    Oct 20    | 1
+perl-base/unicore/lib/InPC/VisualOr.pl     |     566B |    Oct 20    | 1
+perl-base/unicore/lib/InSC                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/InSC/Avagraha.pl     |     626B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Bindu.pl        |     892B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Cantilla.pl     |     576B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consona2.pl     |     608B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consona3.pl     |     586B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consona4.pl     |     586B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consona5.pl     |     562B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consona6.pl     |     531B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Consonan.pl     |     2.0K |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Invisibl.pl     |     566B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Nukta.pl        |     722B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Number.pl       |     918B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Other.pl        |     3.4K |    Oct 20    | 1
+perl-base/unicore/lib/InSC/PureKill.pl     |     652B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Syllable.pl     |     618B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/ToneMark.pl     |     650B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Virama.pl       |     732B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Visarga.pl      |     796B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/Vowel.pl        |     548B |    Oct 20    | 1
+perl-base/unicore/lib/InSC/VowelDep.pl     |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/InSC/VowelInd.pl     |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Jg                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Jg/Ain.pl            |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Alef.pl           |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Beh.pl            |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Dal.pl            |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/FarsiYeh.pl       |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Feh.pl            |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Gaf.pl            |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Hah.pl            |     570B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Kaf.pl            |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Lam.pl            |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/NoJoinin.pl       |     714B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Qaf.pl            |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Reh.pl            |     570B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Sad.pl            |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Seen.pl           |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Waw.pl            |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Jg/Yeh.pl            |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Jt                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Jt/C.pl              |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Jt/D.pl              |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/Jt/R.pl              |    1021B |    Oct 20    | 1
+perl-base/unicore/lib/Jt/T.pl              |     3.4K |    Oct 20    | 1
+perl-base/unicore/lib/Jt/U.pl              |     3.6K |    Oct 20    | 1
+perl-base/unicore/lib/Lb                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Lb/AI.pl             |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/AL.pl             |     8.1K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/BA.pl             |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/BB.pl             |     652B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/CJ.pl             |     790B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/CL.pl             |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/CM.pl             |     2.8K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/EX.pl             |     734B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/GL.pl             |     594B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/ID.pl             |     2.0K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/IN.pl             |     533B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/IS.pl             |     580B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/NS.pl             |     678B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/OP.pl             |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/Lb/PO.pl             |     692B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/PR.pl             |     702B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/QU.pl             |     620B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/SA.pl             |     926B |    Oct 20    | 1
+perl-base/unicore/lib/Lb/XX.pl             |     7.2K |    Oct 20    | 1
+perl-base/unicore/lib/Lower                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Lower/Y.pl           |     6.8K |    Oct 20    | 1
+perl-base/unicore/lib/Math                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Math/Y.pl            |     2.0K |    Oct 20    | 1
+perl-base/unicore/lib/NFCQC                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/NFCQC/M.pl           |     894B |    Oct 20    | 1
+perl-base/unicore/lib/NFCQC/Y.pl           |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/NFDQC                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/NFDQC/N.pl           |     2.8K |    Oct 20    | 1
+perl-base/unicore/lib/NFDQC/Y.pl           |     2.8K |    Oct 20    | 1
+perl-base/unicore/lib/NFKCQC               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/NFKCQC/N.pl          |     3.2K |    Oct 20    | 1
+perl-base/unicore/lib/NFKCQC/Y.pl          |     3.6K |    Oct 20    | 1
+perl-base/unicore/lib/NFKDQC               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/NFKDQC/N.pl          |     4.7K |    Oct 20    | 1
+perl-base/unicore/lib/NFKDQC/Y.pl          |     4.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nt                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Nt/Di.pl             |     702B |    Oct 20    | 1
+perl-base/unicore/lib/Nt/None.pl           |     2.6K |    Oct 20    | 1
+perl-base/unicore/lib/Nt/Nu.pl             |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Nv                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Nv/0.pl              |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/10.pl             |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/100.pl            |     828B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1000.pl           |     710B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/10000.pl          |     594B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/11.pl             |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/12.pl             |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/13.pl             |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/14.pl             |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/15.pl             |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/16.pl             |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/17.pl             |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/18.pl             |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/19.pl             |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1_2.pl            |     624B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1_3.pl            |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1_4.pl            |     612B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/1_8.pl            |     544B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/2.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/20.pl             |     842B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/200.pl            |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/2_3.pl            |     572B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/3.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/30.pl             |     672B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/300.pl            |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/3_4.pl            |     564B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/4.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/40.pl             |     674B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/400.pl            |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/5.pl              |     1.7K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/50.pl             |     760B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/500.pl            |     606B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/5000.pl           |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/50000.pl          |     548B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/6.pl              |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/60.pl             |     610B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/600.pl            |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/7.pl              |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/70.pl             |     610B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/700.pl            |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/8.pl              |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/80.pl             |     598B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/800.pl            |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/9.pl              |     1.5K |    Oct 20    | 1
+perl-base/unicore/lib/Nv/90.pl             |     598B |    Oct 20    | 1
+perl-base/unicore/lib/Nv/900.pl            |     550B |    Oct 20    | 1
+perl-base/unicore/lib/PatSyn               |       0B |    Oct 20    | 0
+perl-base/unicore/lib/PatSyn/Y.pl          |     747B |    Oct 20    | 1
+perl-base/unicore/lib/Perl                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Perl/Alnum.pl        |     7.5K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Assigned.pl     |     7.3K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Blank.pl        |     561B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Graph.pl        |     7.4K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/PerlWord.pl     |     514B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/PosixPun.pl     |     515B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Print.pl        |     7.4K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/SpacePer.pl     |     579B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Title.pl        |     582B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/Word.pl         |     7.7K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/XPosixPu.pl     |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlAny.pl     |     1.6K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlCh2.pl     |     7.7K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlCha.pl     |     6.6K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlFol.pl     |     772B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlIDC.pl     |     7.7K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlIDS.pl     |     6.7K |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlNch.pl     |     742B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlPat.pl     |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlPr2.pl     |     602B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlPro.pl     |     594B |    Oct 20    | 1
+perl-base/unicore/lib/Perl/_PerlQuo.pl     |     880B |    Oct 20    | 1
+perl-base/unicore/lib/QMark                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/QMark/Y.pl           |     622B |    Oct 20    | 1
+perl-base/unicore/lib/SB                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/SB/AT.pl             |     529B |    Oct 20    | 1
+perl-base/unicore/lib/SB/CL.pl             |     962B |    Oct 20    | 1
+perl-base/unicore/lib/SB/EX.pl             |     3.0K |    Oct 20    | 1
+perl-base/unicore/lib/SB/FO.pl             |     690B |    Oct 20    | 1
+perl-base/unicore/lib/SB/LE.pl             |     5.5K |    Oct 20    | 1
+perl-base/unicore/lib/SB/LO.pl             |     6.8K |    Oct 20    | 1
+perl-base/unicore/lib/SB/NU.pl             |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/SB/SC.pl             |     694B |    Oct 20    | 1
+perl-base/unicore/lib/SB/ST.pl             |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/SB/Sp.pl             |     567B |    Oct 20    | 1
+perl-base/unicore/lib/SB/UP.pl             |     6.8K |    Oct 20    | 1
+perl-base/unicore/lib/SB/XX.pl             |     8.4K |    Oct 20    | 1
+perl-base/unicore/lib/SD                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/SD/Y.pl              |     842B |    Oct 20    | 1
+perl-base/unicore/lib/STerm                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/STerm/Y.pl           |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Sc                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Sc/Arab.pl           |     1.2K |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Armn.pl           |     552B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Beng.pl           |     630B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Cham.pl           |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Cprt.pl           |     562B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Cyrl.pl           |     566B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Deva.pl           |     531B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Dupl.pl           |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Ethi.pl           |     838B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Geor.pl           |     576B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Gran.pl           |     670B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Grek.pl           |     840B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Gujr.pl           |     630B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Guru.pl           |     650B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Han.pl            |     692B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Hang.pl           |     656B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Hebr.pl           |     592B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Hira.pl           |     541B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Hmng.pl           |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Kana.pl           |     588B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Khar.pl           |     586B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Khmr.pl           |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Knda.pl           |     630B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Lana.pl           |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Lao.pl            |     670B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Latn.pl           |     801B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Limb.pl           |     540B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Linb.pl           |     574B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Mlym.pl           |     600B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Mong.pl           |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Mult.pl           |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Orya.pl           |     630B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Sinh.pl           |     622B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Talu.pl           |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Taml.pl           |     650B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Telu.pl           |     620B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Tibt.pl           |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Xsux.pl           |     537B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Zinh.pl           |     790B |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Zyyy.pl           |     2.4K |    Oct 20    | 1
+perl-base/unicore/lib/Sc/Zzzz.pl           |     7.3K |    Oct 20    | 1
+perl-base/unicore/lib/Scx                  |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Scx/Arab.pl          |     1.1K |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Armn.pl          |     552B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Beng.pl          |     650B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Bopo.pl          |     726B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Cakm.pl          |     533B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Copt.pl          |     534B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Cprt.pl          |     598B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Cyrl.pl          |     556B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Deva.pl          |     554B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Dupl.pl          |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Geor.pl          |     586B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Glag.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Gran.pl          |     770B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Grek.pl          |     856B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Gujr.pl          |     662B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Guru.pl          |     682B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Han.pl           |     862B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Hang.pl          |     836B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Hira.pl          |     782B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Kana.pl          |     756B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Knda.pl          |     670B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Latn.pl          |     851B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Limb.pl          |     550B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Linb.pl          |     610B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Mlym.pl          |     630B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Mong.pl          |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Mult.pl          |     560B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Mymr.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Orya.pl          |     650B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Phlp.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Shrd.pl          |     564B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Sind.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Sinh.pl          |     632B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Syrc.pl          |     580B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Tagb.pl          |     529B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Takr.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Taml.pl          |     692B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Telu.pl          |     650B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Thaa.pl          |     564B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Tirh.pl          |     535B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Yi.pl            |     574B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Zinh.pl          |     670B |    Oct 20    | 1
+perl-base/unicore/lib/Scx/Zyyy.pl          |     2.1K |    Oct 20    | 1
+perl-base/unicore/lib/Term                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Term/Y.pl            |     1.4K |    Oct 20    | 1
+perl-base/unicore/lib/UIdeo                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/UIdeo/Y.pl           |     654B |    Oct 20    | 1
+perl-base/unicore/lib/Upper                |       0B |    Oct 20    | 0
+perl-base/unicore/lib/Upper/Y.pl           |     6.8K |    Oct 20    | 1
+perl-base/unicore/lib/WB                   |       0B |    Oct 20    | 0
+perl-base/unicore/lib/WB/EX.pl             |     552B |    Oct 20    | 1
+perl-base/unicore/lib/WB/FO.pl             |     680B |    Oct 20    | 1
+perl-base/unicore/lib/WB/HL.pl             |     606B |    Oct 20    | 1
+perl-base/unicore/lib/WB/KA.pl             |     600B |    Oct 20    | 1
+perl-base/unicore/lib/WB/LE.pl             |     5.8K |    Oct 20    | 1
+perl-base/unicore/lib/WB/MB.pl             |     552B |    Oct 20    | 1
+perl-base/unicore/lib/WB/ML.pl             |     576B |    Oct 20    | 1
+perl-base/unicore/lib/WB/MN.pl             |     632B |    Oct 20    | 1
+perl-base/unicore/lib/WB/NU.pl             |     1.0K |    Oct 20    | 1
+perl-base/unicore/lib/WB/XX.pl             |     7.8K |    Oct 20    | 1
+perl-base/unicore/lib/XIDC                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/XIDC/Y.pl            |     7.7K |    Oct 20    | 1
+perl-base/unicore/lib/XIDS                 |       0B |    Oct 20    | 0
+perl-base/unicore/lib/XIDS/Y.pl            |     6.7K |    Oct 20    | 1
+perl-base/utf8.pm                          |     342B |    Oct 20    | 1
+perl-base/utf8_heavy.pl                    |    30.9K |    Oct 20    | 1
+perl-base/vars.pm                          |     1.1K |    Oct 20    | 1
+perl-base/warnings                         |       0B |    Oct 20    | 0
+perl-base/warnings.pm                      |    21.1K |    Oct 20    | 1
+perl-base/warnings/register.pm             |     488B |    Oct 20    | 1
+perl5                                      |       0B |    Oct 20    | 0
+perl5/5.24                                 |       0B |    Oct 20    | 0
+perl5/5.24/Locale                          |       0B |    Oct 20    | 0
+perl5/5.24/Locale/gettext.pm               |     6.7K |    Oct 20    | 1
+perl5/5.24/Text                            |       0B |    Oct 20    | 0
+perl5/5.24/Text/CharWidth.pm               |     2.0K |    Oct 20    | 1
+perl5/5.24/Text/Iconv.pm                   |     4.9K |    Oct 20    | 1
+perl5/5.24/auto                            |       0B |    Oct 20    | 0
+perl5/5.24/auto/Locale                     |       0B |    Oct 20    | 0
+perl5/5.24/auto/Locale/gettext             |       0B |    Oct 20    | 0
+perl5/5.24/auto/Locale/gettext/gettext.so  |    13.8K |    Oct 20    | 1
+perl5/5.24/auto/Text                       |       0B |    Oct 20    | 0
+perl5/5.24/auto/Text/CharWidth             |       0B |    Oct 20    | 0
+perl5/5.24/auto/Text/CharWidth/CharWidth.so|    10.1K |    Oct 20    | 1
+perl5/5.24/auto/Text/Iconv                 |       0B |    Oct 20    | 0
+perl5/5.24/auto/Text/Iconv/Iconv.so        |    18.2K |    Oct 20    | 1
+perl5/5.24/auto/Text/Iconv/autosplit.ix    |      89B |    Oct 20    | 1
+pkcs11                                     |       0B |    Oct 20    | 0
+pkcs11-spy.so                              |    88.2K |    Oct 20    | 1
+pkcs11/onepin-opensc-pkcs11.so             |       0B | Jan 01 1970  | 0
+pkcs11/opensc-pkcs11.so                    |       0B | Jan 01 1970  | 0
+pkcs11/pkcs11-spy.so                       |       0B | Jan 01 1970  | 0
+rsyslog                                    |       0B |    Oct 20    | 0
+rsyslog/imfile.so                          |    39.5K |    Oct 20    | 1
+rsyslog/imjournal.so                       |    23.2K |    Oct 20    | 1
+rsyslog/imklog.so                          |    19.0K |    Oct 20    | 1
+rsyslog/imkmsg.so                          |    14.9K |    Oct 20    | 1
+rsyslog/immark.so                          |    10.6K |    Oct 20    | 1
+rsyslog/impstats.so                        |    19.1K |    Oct 20    | 1
+rsyslog/imptcp.so                          |    39.6K |    Oct 20    | 1
+rsyslog/imtcp.so                           |    19.4K |    Oct 20    | 1
+rsyslog/imudp.so                           |    27.5K |    Oct 20    | 1
+rsyslog/imuxsock.so                        |    31.9K |    Oct 20    | 1
+rsyslog/lmnet.so                           |    22.6K |    Oct 20    | 1
+rsyslog/lmnetstrms.so                      |    16.1K |    Oct 20    | 1
+rsyslog/lmnsd_ptcp.so                      |    24.3K |    Oct 20    | 1
+rsyslog/lmregexp.so                        |     6.0K |    Oct 20    | 1
+rsyslog/lmstrmsrv.so                       |    20.3K |    Oct 20    | 1
+rsyslog/lmtcpclt.so                        |    10.0K |    Oct 20    | 1
+rsyslog/lmtcpsrv.so                        |    32.7K |    Oct 20    | 1
+rsyslog/lmzlibw.so                         |    10.0K |    Oct 20    | 1
+rsyslog/mmanon.so                          |    14.1K |    Oct 20    | 1
+rsyslog/mmexternal.so                      |    18.1K |    Oct 20    | 1
+rsyslog/mmjsonparse.so                     |    14.1K |    Oct 20    | 1
+rsyslog/mmnormalize.so                     |    14.1K |    Oct 20    | 1
+rsyslog/mmpstrucdata.so                    |    14.1K |    Oct 20    | 1
+rsyslog/mmsequence.so                      |    14.1K |    Oct 20    | 1
+rsyslog/mmutf8fix.so                       |    10.1K |    Oct 20    | 1
+rsyslog/omjournal.so                       |    14.1K |    Oct 20    | 1
+rsyslog/ommail.so                          |    18.8K |    Oct 20    | 1
+rsyslog/omprog.so                          |    22.1K |    Oct 20    | 1
+rsyslog/omuxsock.so                        |    14.5K |    Oct 20    | 1
+rsyslog/pmaixforwardedfrom.so              |    10.7K |    Oct 20    | 1
+rsyslog/pmcisconames.so                    |    10.7K |    Oct 20    | 1
+rsyslog/pmlastmsg.so                       |    10.7K |    Oct 20    | 1
+rsyslog/pmsnare.so                         |    10.7K |    Oct 20    | 1
+sasl2                                      |       0B |    Oct 20    | 0
+sasl2/libanonymous.so                      |       0B | Jan 01 1970  | 0
+sasl2/libanonymous.so.2                    |       0B | Jan 01 1970  | 0
+sasl2/libanonymous.so.2.0.25               |    18.1K |    Oct 20    | 1
+sasl2/libcrammd5.so                        |       0B | Jan 01 1970  | 0
+sasl2/libcrammd5.so.2                      |       0B | Jan 01 1970  | 0
+sasl2/libcrammd5.so.2.0.25                 |    22.1K |    Oct 20    | 1
+sasl2/libdigestmd5.so                      |       0B | Jan 01 1970  | 0
+sasl2/libdigestmd5.so.2                    |       0B | Jan 01 1970  | 0
+sasl2/libdigestmd5.so.2.0.25               |    54.4K |    Oct 20    | 1
+sasl2/liblogin.so                          |       0B | Jan 01 1970  | 0
+sasl2/liblogin.so.2                        |       0B | Jan 01 1970  | 0
+sasl2/liblogin.so.2.0.25                   |    18.1K |    Oct 20    | 1
+sasl2/libntlm.so                           |       0B | Jan 01 1970  | 0
+sasl2/libntlm.so.2                         |       0B | Jan 01 1970  | 0
+sasl2/libntlm.so.2.0.25                    |    34.1K |    Oct 20    | 1
+sasl2/libplain.so                          |       0B | Jan 01 1970  | 0
+sasl2/libplain.so.2                        |       0B | Jan 01 1970  | 0
+sasl2/libplain.so.2.0.25                   |    18.1K |    Oct 20    | 1
+sasl2/libsasldb.so                         |       0B | Jan 01 1970  | 0
+sasl2/libsasldb.so.2                       |       0B | Jan 01 1970  | 0
+sasl2/libsasldb.so.2.0.25                  |    25.9K |    Oct 20    | 1
+

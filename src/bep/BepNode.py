@@ -102,6 +102,7 @@ class BepNode:
         files = []
 
         # while there are messages to be read, keep reading it them
+        # useful if share data is too big to fit in 1 message
         while select.select([self.__conn], [], [], 1)[0]:
             share = self._read_msg()
             files += filter(lambda f: not f.deleted, share.files)

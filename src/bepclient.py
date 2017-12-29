@@ -61,21 +61,29 @@ def main():
         return
 
     share_id = args['<share_id>']
-    client.cluster_config(folders=[share_id])
+    peer_cluster = client.cluster_config(folders=[share_id])
+    assert share_id in [f.id for f in peer_cluster.folders], f'could not find share "{share_id}"'
+
     share = client.list_folder(folder=share_id)
 
     if not args['download']:
-        # we want to list shares
-        print(f"Folder '{share['folder']}' files:")
+        # we want to list share content
+        print(f"Folder '{share['folder']}' content:")
+        line_format = '{name:43}| {size:>8} | {modified:^12} | {blocks:8>}'
+        print(line_format.format(name='File', size='Size ', modified='Modified', blocks='Blocks'))
+
         for file in share['files']:
-            print(f'\t- {file.name:40} | size: {humanize.naturalsize(file.size, gnu=True):>6} | modified: {humanize.naturaldate(datetime.fromtimestamp(file.modified_s)):^12}| blocks: {len(file.Blocks)}')
+            print(line_format.format(name=file.name,
+                                     size=humanize.naturalsize(file.size, gnu=True),
+                                     modified=humanize.naturaldate(datetime.fromtimestamp(file.modified_s)),
+                                     blocks=len(file.Blocks)))
         print()
         return
 
     # download file
     remotefile = args['<remotefile>']
     files = {f.name: f for f in share['files']}
-    assert remotefile in files, f'could not find file {remotefile}'
+    assert remotefile in files, f'could not find file "{remotefile}"'
     res = client.download_file(file=files[remotefile], folder=share['folder'])
 
     localfile = args['<localfile>']
