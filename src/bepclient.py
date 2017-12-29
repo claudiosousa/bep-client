@@ -1,25 +1,24 @@
 #!/usr/bin/env python3.6
 
 """
-Bep client, can be used to download & upload files to a BEP node.
+Bep client, can be used to download files from a BEP node.
 
 Usage:
-  bepclient.py [options] (showid | connect <host> [share <share_id> [(download <remotefile> <localfile> | upload <localfile>)]])
+  bepclient.py [options] (showid | connect <host> [share <share_id> [download <remotefile> <localfile>]])
 
 Examples:
   bepclient.py [options] showid
   bepclient.py [options] connect 129.194.186.177
   bepclient.py [options] connect 129.194.186.177 share hyperfacile
   bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py /tmp/plistlib.py
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile upload filename.py
   bepclient.py -h | --help
 
 Options:
-  -h --help          Show this screen.
   --key=<keyfile>    Key file [default: config/key.pem].
   --cert=<certfile>  Certificate file [default: config/cert.pem].
   --port=<port>      Host port [default: 22000]
   --name=<name>      The client name [default: Claudio's BEP client].
+  -h --help          Show this screen.
 """
 
 
@@ -84,13 +83,15 @@ def main():
     remotefile = args['<remotefile>']
     files = {f.name: f for f in share['files']}
     assert remotefile in files, f'could not find file "{remotefile}"'
+    assert not files[remotefile].type, 'Only files of type "FILE" can be downloaded'
+
     res = client.download_file(file=files[remotefile], folder=share['folder'])
 
     localfile = args['<localfile>']
     with open(localfile, "wb") as f:
         f.write(res)
 
-    print(f'File {localfile} downloaded')
+    print(f'File "{localfile}" downloaded')
 
 
 if __name__ == '__main__':
