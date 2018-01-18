@@ -7,7 +7,7 @@ pages:
   - apk update && apk add doxygen
   - cd src/bep
   - doxygen BepNode.py
-  - mv html/ public/
+  - mv html/ ../../public/
   artifacts:
     paths:
     - public
