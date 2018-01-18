@@ -14,6 +14,8 @@ On y modélise le protocole depuis trois approches différentes:
  * Le diagramme de séquences
  * Le diagramme de classes des messages échangées
 
+Le coeur du BEP protocol est implémenté dans la class [BepNode.py](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/src/bep/BepNode.py) et sa documentation est disponible en [html](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/documentation/html)
+
 ## BEP Client
 
 Le dossier *src* contient l'implémentation du protocole.
@@ -45,7 +47,7 @@ Options:
 ~~~~~~~
 
 
-#### Exemples
+#### Exemples d'utilisation
 
 **Montrer l'id du certificat utilisé:**
 
@@ -85,7 +87,7 @@ Connected to: redbox
 File "/tmp/plistlib.py" downloaded
 ~~~~~~~
 
-## Auteurs
+# Auteurs
 
 Ce project est réalisé par *Claudio Sousa, ITI soir 2018*
 

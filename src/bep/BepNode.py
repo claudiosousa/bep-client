@@ -1,3 +1,7 @@
+"""
+Bla bla
+"""
+
 import base64
 import hashlib
 import socket
@@ -35,12 +39,15 @@ ResponsesByTypeValue = [
 ]
 
 class BepNode:
-    irequest = 0
-    client_id = None
+    """
+    Implements the BEP protocol.
 
+    Provides the behavior to connect to a BEP peer node, get the list of shares, the files of a share and download files.
+    """
     def __init__(self, cert, key):
         """Initial TLSv1.2 connection with certificate and key file"""
 
+        self.__irequest = 0
         self.client_id = certificate_id(cert)
 
         context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
@@ -49,13 +56,13 @@ class BepNode:
         self.__conn = context.wrap_socket(socket.socket(socket.AF_INET))
 
     def connect(self, endpoint):
-        """Connect to endpoint"""
+        """Connects to a peer BEP node endpoint"""
 
         self.__conn.connect(endpoint)
         self.__conn.do_handshake()
 
     def hello(self, name):
-        """Exchange hello's"""
+        """Exchange hello's messages"""
 
         HELLO_MAGIC_NUMBER = 0x2EA7D90B
 
@@ -76,7 +83,7 @@ class BepNode:
         return hello
 
     def cluster_config(self, folders):
-        """Send our cluster configuration"""
+        """Exchange cluster configuration messages"""
 
         f_name = folders or []
 
@@ -96,7 +103,7 @@ class BepNode:
         return res
 
     def list_folder(self, folder='default'):
-        """List a folder files"""
+        """Lists a folder files"""
 
         index = protocol.IndexUpdate()
         index.folder = folder
@@ -122,10 +129,10 @@ class BepNode:
         request.name = file.name
 
         for block in file.Blocks:
-            request.id = self.irequest
+            request.id = self.__irequest
             request.offset = block.offset
             request.size = block.size
-            self.irequest += 1
+            self.__irequest += 1
             self._send_msg(request, protocol.REQUEST)
             res = self._read_msg()
             assert res.DESCRIPTOR.name == 'Response', 'Expected msg of type Response'
@@ -145,7 +152,7 @@ class BepNode:
         return buffer
 
     def _send_msg(self, msg, msg_type):
-        '''
+        """
          0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
         +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
         |         Header Length         |
@@ -161,7 +168,7 @@ class BepNode:
         \            Message            \
         /                               /
         +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-        '''
+        """
         header = protocol.Header()
         header.type = msg_type
         header.compression = protocol.NONE
@@ -171,6 +178,8 @@ class BepNode:
         self.__conn.send(bytes([*pack_short(len(header_str)), *header_str, *pack_int(len(msg_str)), *msg_str]))
 
     def _read_msg(self):
+        """Reads a message from peer BEP node"""
+
         header = protocol.Header()
         header_size = unpack_short(self._read(2))
         header.ParseFromString(self._read(header_size))
@@ -187,7 +196,7 @@ class BepNode:
         return response
 
 def certificate_id(certfile):
-    'Calculates the client id based on the certificate'
+    """Calculates the client id based on the certificate"""
 
     cert_content = open(certfile, 'rt').read()
 
@@ -200,7 +209,7 @@ def certificate_id(certfile):
     alphabet_dict = {l: i for i, l in enumerate(alphabet)}
 
     def luhn_number(part):
-        'https://en.wikipedia.org/wiki/Luhn_algorithm'
+        """https://en.wikipedia.org/wiki/Luhn_algorithm"""
         total = 0
         for i, v in enumerate(alphabet_dict[x] for x in part):
             if i % 2:
