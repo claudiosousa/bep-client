@@ -85,10 +85,6 @@ Connected to: redbox
 File "/tmp/plistlib.py" downloaded
 ~~~~~~~
 
-[You can use numbers for reference-style link definitions][1]
-
-[1]: http://slashdot.org
-
 ## Auteurs
 
 Ce project est réalisé par *Claudio Sousa, ITI soir 2018*
