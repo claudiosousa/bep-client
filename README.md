@@ -95,5 +95,5 @@ Ce project est réalisé par *Claudio Sousa, ITI soir 2018*
 
 # References
 
-[^1]: @syncthing
-[^2]: @bep
+[^1]: https://syncthing.net"
+[^2]: https://docs.syncthing.net/specs/bep-v1.html
