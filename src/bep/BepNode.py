@@ -1,7 +1,3 @@
-"""
-Bla bla
-"""
-
 import base64
 import hashlib
 import socket
