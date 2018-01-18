@@ -14,7 +14,7 @@ On y modélise le protocole depuis trois approches différentes:
  * Le diagramme de séquences
  * Le diagramme de classes des messages échangées
 
-Le coeur du BEP protocol est implémenté dans la class [BepNode.py](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/src/bep/BepNode.py) et sa documentation est disponible en [html](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/documentation/html/index.html).
+Le coeur du BEP protocol est implémenté dans la class [BepNode.py](https://githepia.hesge.ch/claudio.martinss/bep-client/raw/master/src/bep/BepNode.py) et sa documentation est disponible en [html](https://claudio.sousa.gitlab.io/bep-client/classBepNode_1_1BepNode.html).
 
 ## BEP Client
 
