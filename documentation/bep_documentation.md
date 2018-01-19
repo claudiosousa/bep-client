@@ -51,7 +51,7 @@ Le premier chapitre, *Block Exchange Protocol*, décrit l'analyse faite sur le p
 On modélise le protocole depuis trois approches différentes:
 
  * Le diagramme d'états
- * Le diagramme de séquences
+ * Le diagramme de séquence
  * Le diagramme de classes des messages échangées
 
 Dans le deuxième chapitre, *BEP Client*, on décrit le mini-projet consistant à implémenter une partie du protocole décrit au premier chapitre.
@@ -423,18 +423,38 @@ Le diagramme de classes des différentes méssages échangées est dessiné ci-d
 
 # Bep client
 
-Nous avons implémenté une partie du protocole BEP dans un client nommé *Bep client* qui offre quelques fonctionalitées de base BEP.
+Nous avons implémenté une partie du protocole BEP dans un client nommé *BepClient* qui offre quelques fonctionalitées de base BEP.
 Ces fonctionnalités sont disponibles en tant qu'executable en ligne de commande (CLI), mais aussi en tant que librairie. Cette dernière pourrait être utilisée par une application souhaitant communiquer avec un server BEP sans avoir à re-implémenter le protocole.
 
 L'énoncé établi quelques limitations:
 
  * la synchronisation se fait avec un seul noeud Syncthing.
- * on suppose qu'on connaît  l'IP du noeud Syncthing, et on n'utilisera pas de protocole Global/Local Discovery.
+ * on suppose qu'on connaît l'IP du noeud Syncthing, et on n'utilisera pas de protocole Global/Local Discovery.
+
+Le client offre les les fonctionalitées suivantes:
+ #. Genèrer le *client-id* depuis le certificat
+ #. Se connecter à un client BEP et lister les dossiers partagés (*shares*)
+ #. Lister tous les fichiers d'un dossier partagé
+ #. Télecharger un fichier partagé
+
+La philosophie derrière notre implémentation est celle de proposer un outil simple qui implémente le protocol BEP avec simplicité.
+Le résultat est un script court qui se veut facile à maintenir. Il peut être utilisé par un script pour créer des taches automatisées.
+
+## Diagramme de séquence
+
+![BepClient sequence diagram\label{bepclient_seq}](rsc/SeqClient.png){width=70%}
+
+Les fonctionalitées proposées par notre *BepClient* sont incrémentales et ceci est illustré dans le diagramme de séquence montré en figure \ref{bepclient_seq}.
+
+Lorqu'on veut obtenir la liste des dossiers partagés par un noeud BEP, le programme exécute les sections *1 Connect* et *2 Get list of shares* du diagramme de séquence. Si on veut obtenir la liste des fichiers dans un dossier partagé, le programme execéte les section 1 et 2, comme précédèment, suivi de la section *3 Get share file list*.
+
+Finalment, lorqu'on désire télécharger un document le programme exécute toutes les sections: 1, 2, 3 et *4 Download a file*.
 
 
-## Class diagramme
+\newpage
+## Diagramme de classes
 
-![bep client\label{bepclient_class}](rsc/bepclient.png)
+![BepClient class diagram\label{bepclient_class}](rsc/bepclient.png)
 
 La classe *BepNode* est au coeur de l'implémentation.
 Elle implémente le protocol BEP et utilise les classes de message générées depuis la définition protobuf. Cette classe utilise des packages tiers pour la serialization, connection SSL et décompression. Ceci est visible dans la figure \ref{bepclient_class}.
