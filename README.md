@@ -29,13 +29,13 @@ $> bepclient.py -h
 Bep client, can be used to download files from a BEP node.
 
 Usage:
-  bepclient.py [options] (showid | connect <host> [share <share_id> [download <remotefile> <localfile>]])
+  bepclient.py [options] (showid | connect <host> [share <share_id> [download <destination>]])
 
 Examples:
   bepclient.py [options] showid
   bepclient.py [options] connect 129.194.186.177
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py /tmp/plistlib.py
+  bepclient.py [options] connect 129.194.186.177 share facile
+  bepclient.py [options] connect 129.194.186.177 share facile download /tmp/destination
   bepclient.py -h | --help
 
 Options:
@@ -49,14 +49,14 @@ Options:
 
 #### Exemples d'utilisation
 
-**Montrer l'id du certificat utilisé:**
+**Montrer l'id du certificat utilisé :**
 
 ~~~~~~~ {.bash }
 $> ./bepclient.py showid
 Client id: HG3DI2F-JKKVY3Z-HL5ZCWN-FH53M35-CMGFGE5-WAPGTV6-5SBWC6W-4VZSFA
 ~~~~~~~
 
-**Montrer les folders d'un noeud pair:**
+**Montrer les folders d'un noeud pair :**
 
 ~~~~~~~ {.bash }
 $> ./bepclient.py connect 129.194.186.177
@@ -67,24 +67,25 @@ Shared folders: 3
         -  (moins_facile)
 ~~~~~~~
 
-**Montrer les fichiers d'un folder:**
+**Montrer les fichiers du folder `facile` :**
 
 ~~~~~~~ {.bash }
-$> ./bepclient.py connect 129.194.186.177 share hyperfacile
+$> ./bepclient.py connect 129.194.186.177 share facile
 Connected to: redbox
-Folder 'hyperfacile' files:
-        - platform.py                    | size:  51.4K | modified:    Nov 02   | blocks: 1
-        - platform.pyc                   | size:  36.8K | modified:    Nov 02   | blocks: 1
-        - plistlib.py                    | size:  14.8K | modified:    Nov 02   | blocks: 1
-        - plistlib.pyc                   | size:  18.7K | modified:    Nov 02   | blocks: 1
+Folder 'facile' content:
+File                                       |    Size  |   Modified   | Blocks
+platform.py                                |    51.4K |    Oct 20    | 1
+platform.pyc                               |    36.8K |    Oct 20    | 1
+plistlib.py                                |    14.8K |    Oct 20    | 1
+plistlib.pyc                               |    18.7K |    Oct 20    | 1
 ~~~~~~~
 
-**Telécharger un fichier:**
+**Telécharger le folder `facile` :**
 
 ~~~~~~~ {.bash }
-$> ./bepclient.py connect 129.194.186.177 share hyperfacile download plistlib.py /tmp/plistlib.py
+$> ./bepclient.py connect 129.194.186.177 share facile download /tmp/facile
 Connected to: redbox
-File "/tmp/plistlib.py" downloaded
+Share "facile" downloaded into /tmp/facile
 ~~~~~~~
 
 # Auteurs
