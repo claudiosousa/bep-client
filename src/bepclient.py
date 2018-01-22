@@ -4,13 +4,13 @@
 Bep client, can be used to download files from a BEP node.
 
 Usage:
-  bepclient.py [options] (showid | connect <host> [share <share_id> [download <remotefile> <localfile>]])
+  bepclient.py [options] (showid | connect <host> [share <share_id> [download <destination>]])
 
 Examples:
   bepclient.py [options] showid
   bepclient.py [options] connect 129.194.186.177
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile
-  bepclient.py [options] connect 129.194.186.177 share hyperfacile download plistlib.py /tmp/plistlib.py
+  bepclient.py [options] connect 129.194.186.177 share facile
+  bepclient.py [options] connect 129.194.186.177 share facile download /tmp/destination
   bepclient.py -h | --help
 
 Options:
@@ -23,8 +23,7 @@ Options:
 
 
 from datetime import datetime
-from pprint import pprint
-
+import os
 from docopt import docopt
 
 import humanize
@@ -79,19 +78,23 @@ def main():
         print()
         return
 
-    # download file
-    remotefile = args['<remotefile>']
-    files = {f.name: f for f in share['files']}
-    assert remotefile in files, f'could not find file "{remotefile}"'
-    assert not files[remotefile].type, 'Only files of type "FILE" can be downloaded'
+    # download share
+    destination = args['<destination>']
+    files = filter(lambda f: f.type == 0, share['files'])  # we want files only
 
-    res = client.download_file(file=files[remotefile], folder=share['folder'])
+    for file in files:
+        res = client.download_file(file, folder=share['folder'])
+        file_path = os.path.join(destination, file.name)
 
-    localfile = args['<localfile>']
-    with open(localfile, "wb") as f:
-        f.write(res)
+        directory = os.path.dirname(file_path)
+        if not os.path.exists(directory):
+            # ensure folder exists
+            os.makedirs(directory)
 
-    print(f'File "{localfile}" downloaded')
+        with open(file_path, "wb") as f:
+            f.write(res)
+
+    print(f'Share "{share_id}" downloaded into {destination}')
 
 
 if __name__ == '__main__':
